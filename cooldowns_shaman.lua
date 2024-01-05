@@ -119,7 +119,7 @@ LCT_SpellData[58875] = {
 }
 
 LCT_SpellData[77130] = {
-	specID = { 264 }
+	specID = { 264 },
 	dispel = true,
 	name = "Purify Spirit",
 	buff = 77130,
@@ -377,7 +377,7 @@ LCT_SpellData[375982] = {
 	buff = 375982,
 	class = "SHAMAN",
 	name = "Primordial Wave",
-	specID = { 375982, 321078 }
+	specID = { 375982, 321078 },
 	charges = 1,
 	duration = 45,
 }

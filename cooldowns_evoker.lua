@@ -7,7 +7,7 @@ LCT_SpellData[351338] = {
 }
 
 LCT_SpellData[355913] = {
-	specID = { 1467 }
+	specID = { 1467 },
 	defensive = true,
 	name = "Emerald Blossom",
 	buff = 355913,
@@ -266,7 +266,7 @@ LCT_SpellData[382266] = {
 }
 
 LCT_SpellData[382614] = {
-	specID = { 355936 }
+	specID = { 355936 },
 	offensive = true,
 	name = "Dream Breath",
 	buff = 382614,
@@ -316,7 +316,7 @@ LCT_SpellData[403631] = {
 }
 
 LCT_SpellData[404381] = {
-	specID = { 404195 }
+	specID = { 404195 },
 	defensive = true,
 	name = "Defy Fate",
 	buff = 404381,

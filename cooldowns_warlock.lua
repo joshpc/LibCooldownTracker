@@ -56,7 +56,7 @@ LCT_SpellData[80240] = {
 }
 
 LCT_SpellData[89751] = {
-	specID = { 266 }
+	specID = { 266 },
 	offensive = true,
 	name = "Felstorm",
 	buff = 89751,
@@ -105,7 +105,7 @@ LCT_SpellData[111898] = {
 }
 
 LCT_SpellData[113942] = {
-	specID = { 111771 }
+	specID = { 111771 },
 	other = true,
 	name = "Demonic Gateway",
 	buff = 113942,
@@ -298,7 +298,7 @@ LCT_SpellData[386951] = {
 }
 
 LCT_SpellData[386997] = {
-	specID = { 386997, 321077 }
+	specID = { 386997, 321077 },
 	offensive = true,
 	name = "Soul Rot",
 	buff = 386997,

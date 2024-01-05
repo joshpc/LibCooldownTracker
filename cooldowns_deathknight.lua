@@ -36,7 +36,7 @@ LCT_SpellData[47476] = {
 }
 
 LCT_SpellData[47481] = {
-	specID = { SPEC_DK_UNHOLY }
+	specID = { SPEC_DK_UNHOLY },
 	cc = true,
 	name = "Gnaw",
 	buff = 47481,
@@ -45,7 +45,7 @@ LCT_SpellData[47481] = {
 }
 
 LCT_SpellData[47482] = {
-	specID = { SPEC_DK_UNHOLY }
+	specID = { SPEC_DK_UNHOLY },
 	interrupt = true,
 	name = "Leap",
 	buff = 47482,
@@ -245,7 +245,7 @@ LCT_SpellData[196770] = {
 	class = "DEATHKNIGHT",
 	name = "Remorseless Winter",
 	talent = true,
-	specID = { SPEC_DK_FROST }
+	specID = { SPEC_DK_FROST },
 	duration = 20,
 }
 
@@ -379,7 +379,7 @@ LCT_SpellData[327574] = {
 }
 
 LCT_SpellData[383269] = {
-	specID = { 383269, 321078 }
+	specID = { 383269, 321078 },
 	offensive = true,
 	name = "Abomination Limb",
 	buff = 383269,

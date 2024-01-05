@@ -352,7 +352,7 @@ LCT_SpellData[360966] = {
 }
 
 LCT_SpellData[375891] = {
-	specID = { 375891, 321078 }
+	specID = { 375891, 321078 },
 	offensive = true,
 	name = "Death Chakram",
 	buff = 375891,

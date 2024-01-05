@@ -5,7 +5,7 @@ local SPEC_PRIEST_HOLY = 257
 local SPEC_PRIEST_SHADOW = 258
 
 LCT_SpellData[527] = {
-	specID = { 256, 257 }
+	specID = { 256, 257 },
 	dispel = true,
 	name = "Purify",
 	buff = 527,
@@ -31,7 +31,7 @@ LCT_SpellData[2050] = {
 }
 
 LCT_SpellData[8092] = {
-	specID = { 256, 258 }
+	specID = { 256, 258 },
 	offensive = true,
 	name = "Mind Blast",
 	buff = 8092,
@@ -325,7 +325,7 @@ LCT_SpellData[213634] = {
 }
 
 LCT_SpellData[215769] = {
-	specID = { 215982 }
+	specID = { 215982 },
 	defensive = true,
 	name = "Spirit of the Redeemer",
 	buff = 215769,
@@ -422,7 +422,7 @@ LCT_SpellData[373481] = {
 }
 
 LCT_SpellData[375901] = {
-	specID = { 375901, 321079 }
+	specID = { 375901, 321079 },
 	offensive = true,
 	name = "Mindgames",
 	buff = 375901,

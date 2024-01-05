@@ -1,5 +1,5 @@
 LCT_SpellData[498] = {
-	specID = { 65 }
+	specID = { 65 },
 	defensive = true,
 	name = "Divine Protection",
 	buff = 498,
@@ -50,7 +50,7 @@ LCT_SpellData[1044] = {
 }
 
 LCT_SpellData[4987] = {
-	specID = { 65 }
+	specID = { 65 },
 	dispel = true,
 	name = "Cleanse",
 	buff = 4987,
@@ -217,7 +217,7 @@ LCT_SpellData[190784] = {
 }
 
 LCT_SpellData[199448] = {
-	specID = { 199452 }
+	specID = { 199452 },
 	externalDefensive = true,
 	name = "Ultimate Sacrifice",
 	buff = 199448,
@@ -349,7 +349,7 @@ LCT_SpellData[343721] = {
 }
 
 LCT_SpellData[375576] = {
-	specID = { 375576, 321076 }
+	specID = { 375576, 321076 },
 	offensive = true,
 	name = "Divine Toll",
 	buff = 375576,
@@ -382,7 +382,7 @@ LCT_SpellData[387174] = {
 }
 
 LCT_SpellData[388007] = {
-	specID = { 388007, 321077 }
+	specID = { 388007, 321077 },
 	offensive = true,
 	name = "Blessing of Summer",
 	buff = 388007,
@@ -399,7 +399,7 @@ LCT_SpellData[389539] = {
 }
 
 LCT_SpellData[403876] = {
-	specID = { 70 }
+	specID = { 70 },
 	defensive = true,
 	name = "Divine Protection",
 	buff = 403876,

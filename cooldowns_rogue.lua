@@ -92,7 +92,7 @@ LCT_SpellData[13750] = {
 }
 
 LCT_SpellData[13877] = {
-	specID = { SPEC_ROGUE_OUTLAW }
+	specID = { SPEC_ROGUE_OUTLAW },
 	offensive = true,
 	name = "Blade Flurry",
 	buff = 13877,
@@ -117,7 +117,7 @@ LCT_SpellData[31230] = {
 }
 
 LCT_SpellData[36554] = {
-	specID = { SPEC_ROGUE_ASSA, SPEC_ROGUE_SUB, 36554 }
+	specID = { SPEC_ROGUE_ASSA, SPEC_ROGUE_SUB, 36554 },
 	other = true,
 	name = "Shadowstep",
 	buff = 36554,
@@ -167,7 +167,7 @@ LCT_SpellData[185311] = {
 }
 
 LCT_SpellData[185313] = {
-	specID = { SPEC_ROGUE_SUB, 185313 }
+	specID = { SPEC_ROGUE_SUB, 185313 },
 	offensive = true,
 	name = "Shadow Dance",
 	buff = 185422,
@@ -176,7 +176,7 @@ LCT_SpellData[185313] = {
 }
 
 LCT_SpellData[195457] = {
-	specID = { 260 }
+	specID = { 260 },
 	other = true,
 	name = "Grappling Hook",
 	buff = 195457,
@@ -225,7 +225,7 @@ LCT_SpellData[212182] = {
 }
 
 LCT_SpellData[212283] = {
-	specID = { SPEC_ROGUE_SUB }
+	specID = { SPEC_ROGUE_SUB },
 	offensive = true,
 	name = "Symbols of Death",
 	buff = 212283,
@@ -274,7 +274,7 @@ LCT_SpellData[280719] = {
 }
 
 LCT_SpellData[315341] = {
-	specID = { 260 }
+	specID = { 260 },
 	offensive = true,
 	name = "Between the Eyes",
 	buff = 315341,
@@ -283,7 +283,7 @@ LCT_SpellData[315341] = {
 }
 
 LCT_SpellData[315508] = {
-	specID = { 260 }
+	specID = { 260 },
 	offensive = true,
 	name = "Roll the Bones",
 	buff = 315508,
@@ -349,7 +349,7 @@ LCT_SpellData[382245] = {
 }
 
 LCT_SpellData[384631] = {
-	specID = { 384631, 321079 }
+	specID = { 384631, 321079 },
 	offensive = true,
 	name = "Flagellation",
 	buff = 384631,
@@ -358,7 +358,7 @@ LCT_SpellData[384631] = {
 }
 
 LCT_SpellData[385408] = {
-	specID = { 385408, 321077 }
+	specID = { 385408, 321077 },
 	offensive = true,
 	name = "Sepsis",
 	buff = 385408,
@@ -371,13 +371,13 @@ LCT_SpellData[385424] = {
 	buff = 385424,
 	class = "ROGUE",
 	name = "Serrated Bone Spike",
-	specID = { 385424, 321078 }
+	specID = { 385424, 321078 },
 	charges = 3,
 	duration = 30,
 }
 
 LCT_SpellData[385616] = {
-	specID = { 385616, 321076 }
+	specID = { 385616, 321076 },
 	offensive = true,
 	name = "Echoing Reprimand",
 	buff = 385616,

@@ -284,7 +284,7 @@ LCT_SpellData[260643] = {
 }
 
 LCT_SpellData[260708] = {
-	specID = { 71 }
+	specID = { 71 },
 	offensive = true,
 	name = "Sweeping Strikes",
 	buff = 260708,
@@ -309,7 +309,7 @@ LCT_SpellData[329038] = {
 }
 
 LCT_SpellData[376079] = {
-	specID = { 376079, 321076 }
+	specID = { 376079, 321076 },
 	offensive = true,
 	name = "Spear of Bastion",
 	buff = 376079,

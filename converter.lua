@@ -74,9 +74,9 @@ for className, spells in pairs(E.spell_db) do
 				if type(value) == "boolean" and value == true then
 					-- Do nothing
 				elseif type(value) == "table" then
-					print("\tspecID = { " .. table.concat(value, ", ") .. " }")
+					print("\tspecID = { " .. table.concat(value, ", ") .. " },")
 				else
-					print("\tspecID = { " .. value .. " }")
+					print("\tspecID = { " .. value .. " },")
 				end
 			elseif type(value) == "boolean" then
 				print("\t" .. key .. " = " .. tostring(value) .. ",")

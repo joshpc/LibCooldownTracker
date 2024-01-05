@@ -119,7 +119,7 @@ LCT_SpellData[50334] = {
 	class = "DRUID",
 	name = "Berserk",
 	talent = true,
-	specID = { 104 }
+	specID = { 104 },
 	duration = 180,
 }
 
@@ -345,7 +345,7 @@ LCT_SpellData[202246] = {
 }
 
 LCT_SpellData[202359] = {
-	specID = { 400636 }
+	specID = { 400636 },
 	other = true,
 	name = "Astral Communion",
 	buff = 202359,
@@ -475,7 +475,7 @@ LCT_SpellData[377847] = {
 }
 
 LCT_SpellData[391528] = {
-	specID = { 391528, 321077 }
+	specID = { 391528, 321077 },
 	offensive = true,
 	name = "Convoke the Spirits",
 	buff = 391528,
@@ -484,7 +484,7 @@ LCT_SpellData[391528] = {
 }
 
 LCT_SpellData[391888] = {
-	specID = { 391888, 321078 }
+	specID = { 391888, 321078 },
 	offensive = true,
 	name = "Adaptive Swarm",
 	uff = 391888,

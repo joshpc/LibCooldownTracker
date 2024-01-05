@@ -131,7 +131,7 @@ LCT_SpellData[84714] = {
 }
 
 LCT_SpellData[86949] = {
-	specID = { SPEC_MAGE_FIRE }
+	specID = { SPEC_MAGE_FIRE },
 	defensive = true,
 	name = "Cauterize",
 	buff = 86949,
@@ -280,7 +280,7 @@ LCT_SpellData[212653] = {
 }
 
 LCT_SpellData[235219] = {
-	specID = { SPEC_MAGE_FROST }
+	specID = { SPEC_MAGE_FROST },
 	defensive = true,
 	name = "Cold Snap",
 	buff = 235219,
@@ -362,7 +362,7 @@ LCT_SpellData[365350] = {
 }
 
 LCT_SpellData[376103] = {
-	specID = { 376103, 321076 }
+	specID = { 376103, 321076 },
 	offensive = true,
 	name = "Radiant Spark",
 	buff = 376103,
@@ -371,7 +371,7 @@ LCT_SpellData[376103] = {
 }
 
 LCT_SpellData[382440] = {
-	specID = { 382440, 321077 }
+	specID = { 382440, 321077 },
 	offensive = true,
 	name = "Shifting Power",
 	buff = 382440,
@@ -404,7 +404,7 @@ LCT_SpellData[389794] = {
 }
 
 LCT_SpellData[414658] = {
-	specID = { 414659 }
+	specID = { 414659 },
 	defensive = true,
 	name = "Ice Cold",
 	buff = 414658,

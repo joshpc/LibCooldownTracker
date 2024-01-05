@@ -24,7 +24,7 @@ LCT_SpellData[185245] = {
 }
 
 LCT_SpellData[187827] = {
-	specID = { 581 }
+	specID = { 581 },
 	defensive = true,
 	name = "Metamorphosis",
 	buff = 187827,
@@ -46,12 +46,12 @@ LCT_SpellData[189110] = {
 	class = "DEMONHUNTER",
 	name = "Infernal Strike",
 	charges = 2,
-	specID = { 581 }
+	specID = { 581 },
 	duration = 20,
 }
 
 LCT_SpellData[191427] = {
-	specID = { 577 }
+	specID = { 577 },
 	offensive = true,
 	name = "Metamorphosis",
 	buff = 162264,
@@ -84,7 +84,7 @@ LCT_SpellData[198013] = {
 }
 
 LCT_SpellData[198589] = {
-	specID = { 577 }
+	specID = { 577 },
 	defensive = true,
 	name = "Blur",
 	buff = 212800,
@@ -122,7 +122,7 @@ LCT_SpellData[203720] = {
 	class = "DEMONHUNTER",
 	name = "Demon Spikes",
 	charges = 2,
-	specID = { 581 }
+	specID = { 581 },
 	duration = 20,
 }
 
@@ -209,7 +209,7 @@ LCT_SpellData[209258] = {
 }
 
 LCT_SpellData[211881] = {
-	specID = { 577 }
+	specID = { 577 },
 	cc = true,
 	name = "Fel Eruption",
 	buff = 211881,
@@ -298,7 +298,7 @@ LCT_SpellData[342817] = {
 }
 
 LCT_SpellData[370965] = {
-	specID = { 370965, 321077 }
+	specID = { 370965, 321077 },
 	offensive = true,
 	name = "The Hunt",
 	buff = 370965,
@@ -307,7 +307,7 @@ LCT_SpellData[370965] = {
 }
 
 LCT_SpellData[390163] = {
-	specID = { 390163, 321076 }
+	specID = { 390163, 321076 },
 	offensive = true,
 	name = "Elysian Decree",
 	buff = 390163,

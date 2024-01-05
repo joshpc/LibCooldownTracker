@@ -74,7 +74,7 @@ LCT_SpellData[115399] = {
 }
 
 LCT_SpellData[115450] = {
-	specID = { 270 }
+	specID = { 270 },
 	dispel = true,
 	name = "Detox",
 	buff = 115450,
@@ -149,7 +149,7 @@ LCT_SpellData[119582] = {
 }
 
 LCT_SpellData[119996] = {
-	specID = { 101643 }
+	specID = { 101643 },
 	other = true,
 	name = "Transcendence: Transfer",
 	buff = 119996,
@@ -376,7 +376,7 @@ LCT_SpellData[386276] = {
 }
 
 LCT_SpellData[387184] = {
-	specID = { 387184, 321076 }
+	specID = { 387184, 321076 },
 	offensive = true,
 	name = "Weapons of Order",
 	buff = 387184,
@@ -389,7 +389,7 @@ LCT_SpellData[388193] = {
 	buff = 388193,
 	class = "MONK",
 	name = "Faeline Stomp",
-	specID = { 388193, 321077 }
+	specID = { 388193, 321077 },
 	charges = 1,
 	duration = 20,
 }
