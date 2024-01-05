@@ -106,7 +106,7 @@ LCT_SpellData[31884] = {
 	class = "PALADIN",
 	name = "Avenging Wrath",
 	talent = true,
-	duration = { [70] = 60, [default] = 120, },
+	duration = { [70] = 60, default = 120, },
 }
 
 LCT_SpellData[31935] = {

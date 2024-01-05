@@ -22,7 +22,7 @@ LCT_SpellData[2782] = {
 	class = "DRUID",
 	dispel = true,
 	cooldown_starts_on_dispel = true,
-	cooldown = 8
+	cooldown = 8,
     name = "Remove Corruption"
 }
 
@@ -31,7 +31,7 @@ LCT_SpellData[88423] = {
 	specID = { 264 },
 	dispel = true,
 	cooldown_starts_on_dispel = true,
-	cooldown = 8
+	cooldown = 8,
     name = "Nature's Cure"
 }
 
@@ -67,7 +67,7 @@ LCT_SpellData[527] = {
     specID = { 256, 257 },
 	dispel = true,
 	cooldown_starts_on_dispel = true,
-	cooldown = 8
+	cooldown = 8,
 }
 
 LCT_SpellData[51886] = {

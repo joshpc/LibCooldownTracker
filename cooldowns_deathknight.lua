@@ -1,7 +1,3 @@
-local SPEC_DK_BLOOD  = 250
-local SPEC_DK_FROST  = 251
-local SPEC_DK_UNHOLY = 252
-
 LCT_SpellData[42650] = {
 	offensive = true,
 	buff = 42650,
@@ -36,7 +32,7 @@ LCT_SpellData[47476] = {
 }
 
 LCT_SpellData[47481] = {
-	specID = { SPEC_DK_UNHOLY },
+	specID = { 252 },
 	cc = true,
 	name = "Gnaw",
 	buff = 47481,
@@ -45,7 +41,7 @@ LCT_SpellData[47481] = {
 }
 
 LCT_SpellData[47482] = {
-	specID = { SPEC_DK_UNHOLY },
+	specID = { 252 },
 	interrupt = true,
 	name = "Leap",
 	buff = 47482,
@@ -129,7 +125,7 @@ LCT_SpellData[49576] = {
 	disarm = true,
 	name = "Death Grip",
 	buff = 49576,
-	duration = { [SPEC_DK_BLOOD] = 15, [default] = 25, },
+	duration = { [250] = 15, default = 25, },
 	class = "DEATHKNIGHT",
 }
 
@@ -245,7 +241,7 @@ LCT_SpellData[196770] = {
 	class = "DEATHKNIGHT",
 	name = "Remorseless Winter",
 	talent = true,
-	specID = { SPEC_DK_FROST },
+	specID = { 251 },
 	duration = 20,
 }
 

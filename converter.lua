@@ -16,13 +16,21 @@
 E = {}
 E.spell_db = {}
 
+function tableToStringKey(key)
+	if type(key) == "number"
+		return "[" .. key .. "]"
+	else
+		return key
+	end
+end
+
 function tableToString(t, indent)
     local str = "{ "
     for key, value in pairs(t) do
         if type(value) == "table" then
-            str = str .. "[" .. key .. "] = " .. tableToString(value) .. ", "
+            str = str .. tableToStringKey(key) .. " = " .. tableToString(value) .. ", "
         else
-            str = str .. "[" .. key .. "] = " .. tostring(value) .. ", "
+            str = str .. tableToStringKey(key) .. " = " .. tostring(value) .. ", "
         end
     end
     return str .. "}"

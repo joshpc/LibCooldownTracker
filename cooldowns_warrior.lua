@@ -1,7 +1,3 @@
-local SPEC_WARRIOR_ARMS = 71
-local SPEC_WARRIOR_FURY = 72
-local SPEC_WARRIOR_PROT = 73
-
 LCT_SpellData[100] = {
 	other = true,
 	name = "Charge",
@@ -54,7 +50,7 @@ LCT_SpellData[1719] = {
 }
 
 LCT_SpellData[2565] = {
-	charges = { [SPEC_WARRIOR_PROT] = 2, [default] = 1, },
+	charges = { [73] = 2, default = 1, },
 	defensive = true,
 	name = "Shield Block",
 	buff = 132404,
@@ -126,7 +122,7 @@ LCT_SpellData[23920] = {
 	class = "WARRIOR",
 	name = "Spell Reflection",
 	charges = 1,
-	duration = { [SPEC_WARRIOR_PROT] = 20, [default] = 25, },
+	duration = { [73] = 20, default = 25, },
 }
 
 LCT_SpellData[46968] = {

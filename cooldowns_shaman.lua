@@ -1,7 +1,3 @@
-local SPEC_SHAMAN_ELEMENTAL   = 262
-local SPEC_SHAMAN_ENHANCEMENT = 263
-local SPEC_SHAMAN_RESTORATION = 264
-
 LCT_SpellData[2484] = {
 	talent = true,
 	other = true,

@@ -84,7 +84,7 @@ LCT_SpellData[22812] = {
 	defensive = true,
 	name = "Barkskin",
 	buff = 22812,
-	duration = { [104] = 45, [default] = 60, },
+	duration = { [104] = 45, default = 60, },
 	class = "DRUID",
 }
 

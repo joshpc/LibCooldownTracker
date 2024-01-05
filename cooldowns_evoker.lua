@@ -83,7 +83,7 @@ LCT_SpellData[360995] = {
 	other = true,
 	name = "Verdant Embrace",
 	buff = 360995,
-	duration = { [1468] = 18, [default] = 24, },
+	duration = { [1468] = 18, default = 24, },
 	class = "EVOKER",
 }
 

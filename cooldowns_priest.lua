@@ -1,9 +1,3 @@
--- ================ PRIEST ================
-
-local SPEC_PRIEST_DISC = 256
-local SPEC_PRIEST_HOLY = 257
-local SPEC_PRIEST_SHADOW = 258
-
 LCT_SpellData[527] = {
 	specID = { 256, 257 },
 	dispel = true,

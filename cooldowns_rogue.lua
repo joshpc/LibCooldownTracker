@@ -1,7 +1,3 @@
-local SPEC_ROGUE_ASSA = 259
-local SPEC_ROGUE_OUTLAW = 260
-local SPEC_ROGUE_SUB = 261
-
 LCT_SpellData[408] = {
 	cc = true,
 	name = "Kidney Shot",
@@ -92,7 +88,7 @@ LCT_SpellData[13750] = {
 }
 
 LCT_SpellData[13877] = {
-	specID = { SPEC_ROGUE_OUTLAW },
+	specID = { 260 },
 	offensive = true,
 	name = "Blade Flurry",
 	buff = 13877,
@@ -117,7 +113,7 @@ LCT_SpellData[31230] = {
 }
 
 LCT_SpellData[36554] = {
-	specID = { SPEC_ROGUE_ASSA, SPEC_ROGUE_SUB, 36554 },
+	specID = { 259, 261, 36554 },
 	other = true,
 	name = "Shadowstep",
 	buff = 36554,
@@ -167,7 +163,7 @@ LCT_SpellData[185311] = {
 }
 
 LCT_SpellData[185313] = {
-	specID = { SPEC_ROGUE_SUB, 185313 },
+	specID = { 261, 185313 },
 	offensive = true,
 	name = "Shadow Dance",
 	buff = 185422,
@@ -225,7 +221,7 @@ LCT_SpellData[212182] = {
 }
 
 LCT_SpellData[212283] = {
-	specID = { SPEC_ROGUE_SUB },
+	specID = { 261 },
 	offensive = true,
 	name = "Symbols of Death",
 	buff = 212283,

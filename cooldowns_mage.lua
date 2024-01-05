@@ -1,9 +1,3 @@
--- ================ MAGE ================
-
-local SPEC_MAGE_ARCANE = 62
-local SPEC_MAGE_FIRE = 63
-local SPEC_MAGE_FROST = 64
-
 LCT_SpellData[66] = {
 	defensive = true,
 	name = "Invisibility",
@@ -131,7 +125,7 @@ LCT_SpellData[84714] = {
 }
 
 LCT_SpellData[86949] = {
-	specID = { SPEC_MAGE_FIRE },
+	specID = { 63 },
 	defensive = true,
 	name = "Cauterize",
 	buff = 86949,
@@ -280,7 +274,7 @@ LCT_SpellData[212653] = {
 }
 
 LCT_SpellData[235219] = {
-	specID = { SPEC_MAGE_FROST },
+	specID = { 64 },
 	defensive = true,
 	name = "Cold Snap",
 	buff = 235219,
