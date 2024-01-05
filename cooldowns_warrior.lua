@@ -1,340 +1,398 @@
--- ================ WARRIOR ================
-
 local SPEC_WARRIOR_ARMS = 71
 local SPEC_WARRIOR_FURY = 72
 local SPEC_WARRIOR_PROT = 73
 
--- Warrior/baseline
--- Spell Reflection
-LCT_SpellData[23920] = {
-	class = "WARRIOR",
-	defensive = true,
-	duration = 5,
-	cooldown = 25
-}
--- Intervene
-LCT_SpellData[3411] = {
-	class = "WARRIOR",
-	defensive = true,
-	duration = 6,
-	cooldown = 30
-}
--- Berserker Rage
-LCT_SpellData[18499] = {
-	class = "WARRIOR",
-	offensive = true,
-	duration = 6,
-	cooldown = 60
-}
--- Charge
 LCT_SpellData[100] = {
-	class = "WARRIOR",
-	stun = true,
-	opt_charges = 2,
-	cooldown = 20
-}
--- Heroic Leap
-LCT_SpellData[6544] = {
-	class = "WARRIOR",
-	cooldown = 45
-}
--- Pummel
-LCT_SpellData[6552] = {
-	class = "WARRIOR",
-	interrupt = true,
-	silence = true,
-	cooldown = 15
-}
--- Rallying Cry
-LCT_SpellData[97462] = {
-	class = "WARRIOR",
-	talent = true,
-	defensive = true,
-	duration = 10,
-	cooldown = 180
-}
--- Warrior/talents
--- Avatar
-LCT_SpellData[107574] = {
-	class = "WARRIOR",
-	talent = true,
-	offensive = true,
+	other = true,
+	name = "Charge",
+	buff = 100,
 	duration = 20,
-	cooldown = 90
-}
--- Impending Victory
-LCT_SpellData[202168] = {
 	class = "WARRIOR",
-	talent = true,
-	cooldown = 25,
-	-- replaces = 34428, -- Victory Rush which has no CD
 }
--- Storm Bolt
-LCT_SpellData[107570] = {
-	class = "WARRIOR",
-	_talent = true,
-	stun = true,
-	cooldown = 30
-}
--- Intimidating Shout
-LCT_SpellData[5246] = {
-	class = "WARRIOR",
-	cc = true,
-	cooldown = 90
-}
--- Taunt
+
 LCT_SpellData[355] = {
-	class = "WARRIOR",
-	cooldown = 8
-}
--- Warrior/mixed
--- Warrior/talents
--- Disarm
-LCT_SpellData[236077] = {
-	class = "WARRIOR",
 	talent = true,
-	cooldown = 45,
-}
--- Warrior/mixed/talents
--- Dragon Roar
-LCT_SpellData[118000] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_FURY, SPEC_WARRIOR_PROT },
-	talent = true,
-	knockback = true,
-	duration = 6,
-	cooldown = 35,
-}
-
--- Warrior/Arms
--- Overpower
-LCT_SpellData[7384] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_ARMS },
-	cooldown = 12,
-	opt_charges = 3,
-}
--- Bladestorm
-LCT_SpellData[227847] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_ARMS },
-	cooldown = 90
-}
--- Mortal Strike
-LCT_SpellData[12294] = {
-	class ="WARRIOR",
-	specID = { SPEC_WARRIOR_ARMS },
-	offensive = true,
-	cooldown = 6
-}
--- Die by the Sword
-LCT_SpellData[118038] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_ARMS },
-	defensive = true,
+	other = true,
+	name = "Taunt",
+	buff = 355,
 	duration = 8,
-	cooldown = 120
-}
--- Colossus Smash
-LCT_SpellData[167105] = {
 	class = "WARRIOR",
-	talent = true,
-	duration = 10,
-	cooldown = 45,
-}
--- Sweeping Strikes
-LCT_SpellData[260708] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_ARMS },
-	offensive = true,
-	duration = 12,
-	cooldown = 30
-}
--- Warrior/Arms/talents
--- Warbreaker
-LCT_SpellData[262161] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_ARMS },
-	talent = true,
-	duration = 10,
-	cooldown = 45,
-	replaces = 167105, -- Colossus Smash
-}
--- Ravager
-LCT_SpellData[152277] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_ARMS },
-	talent = true,
-	cooldown = 45,
-	duration = 7,
-	replaces = 227847 -- Bladestorm
-}
--- Cleave
-LCT_SpellData[845] = {
-	class ="WARRIOR",
-	specID = { SPEC_WARRIOR_ARMS },
-	talent = true,
-	cooldown = 6
-}
--- Skullsplitter
-LCT_SpellData[260643] = {
-	class ="WARRIOR",
-	specID = { SPEC_WARRIOR_ARMS },
-	talent = true,
-	offensive = true,
-	cooldown = 21
-}
--- Sharpen Blade
-LCT_SpellData[198817] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_ARMS },
-	talent = true,
-	cooldown = 25
-}
--- Deadly Calm
-LCT_SpellData[262228] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_ARMS },
-	talent = true,
-	offensive = true,
-	duration = 6,
-	cooldown = 60
-}
--- Defensive Stance
-LCT_SpellData[197690] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_ARMS },
-	defensive = true,
-	talent = true,
-	cooldown = 3
-}
--- Warbanner
-LCT_SpellData[236320] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_ARMS },
-	talent = true,
-	cooldown = 90,
-}
--- Duel
-LCT_SpellData[236273] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_ARMS },
-	talent = true,
-	cooldown = 60,
-	duration = 6
 }
 
--- Warrior/Fury
--- Raging Blow
-LCT_SpellData[85288] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_FURY },
-	offensive = true,
-	cooldown = 8, -- 20% chance that it's 0
-}
--- Enraged Regeneration
-LCT_SpellData[184364] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_FURY },
-	defensive = true,
-	duration = 8,
-	cooldown = 120
-}
--- Recklessness
-LCT_SpellData[1719] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_FURY },
-	offensive = true,
-	duration = 12,
-	cooldown = 90
-}
--- Warrior/Fury/talents
--- Death Wish
-LCT_SpellData[199261] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_FURY },
-	talent = true,
-	cooldown = 4,
-}
--- Siegebreaker
-LCT_SpellData[280772] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_FURY },
-	talent = true,
-	cooldown = 30,
-}
--- Bladestorm
-LCT_SpellData[46924] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_FURY },
-	talent = true,
-	offensive = true,
-	duration = 6,
-	cooldown = 60
-}
-
--- Warrior/Protection
--- Demoralizing Shout
-LCT_SpellData[1160] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_PROT },
-	defensive = true,
-	cooldown = 45
-}
--- Last Stand
-LCT_SpellData[12975] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_PROT },
-	defensive = true,
-	duration = 15,
-	cooldown = 180
-}
--- Shield Block
-LCT_SpellData[2565] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_PROT },
-	defensive = true,
-	charges = 2,
-	duration = 6,
-	cooldown = 16
-}
--- Shield Wall
 LCT_SpellData[871] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_PROT },
 	defensive = true,
-	duration = 8,
-	cooldown = 210
-}
--- Shockwave
-LCT_SpellData[46968] = {
+	buff = 871,
 	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_PROT },
-	stun = true,
-	cooldown = 40
+	name = "Shield Wall",
+	charges = 1,
+	duration = 210,
 }
--- Warrior/Protection/talents
--- Bodyguard
-LCT_SpellData[213871] = {
-	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_PROT },
-	talent = true,
+
+LCT_SpellData[1160] = {
 	defensive = true,
-	cooldown = 15,
-}
--- Dragon Charge
-LCT_SpellData[206572] = {
+	name = "Demoralizing Shout",
+	buff = 1160,
+	duration = 45,
 	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_PROT },
+}
+
+LCT_SpellData[1161] = {
+	other = true,
+	buff = 1161,
+	class = "WARRIOR",
+	name = "Challenging Shout",
 	talent = true,
+	duration = 120,
+}
+
+LCT_SpellData[1719] = {
 	offensive = true,
-	cooldown = 20,
-}
--- Oppressor
-LCT_SpellData[205800] = {
+	name = "Recklessness",
+	buff = 1719,
+	duration = 90,
 	class = "WARRIOR",
-	specID = { SPEC_WARRIOR_PROT },
+}
+
+LCT_SpellData[2565] = {
+	charges = { [SPEC_WARRIOR_PROT] = 2, [default] = 1, },
+	defensive = true,
+	name = "Shield Block",
+	buff = 132404,
+	duration = 16,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[3411] = {
+	counterCC = true,
+	name = "Intervene",
+	buff = 3411,
+	duration = 30,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[5246] = {
+	cc = true,
+	name = "Intimidating Shout",
+	buff = 5246,
+	duration = 90,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[6544] = {
+	other = true,
+	buff = 202164,
+	class = "WARRIOR",
+	name = "Heroic Leap",
+	charges = 1,
+	duration = 45,
+}
+
+LCT_SpellData[6552] = {
+	interrupt = true,
+	name = "Pummel",
+	buff = 6552,
+	duration = 15,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[12323] = {
+	other = true,
+	name = "Piercing Howl",
+	buff = 12323,
+	duration = 30,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[12975] = {
+	defensive = true,
+	name = "Last Stand",
+	buff = 12975,
+	duration = 180,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[18499] = {
+	counterCC = true,
+	buff = 18499,
+	class = "WARRIOR",
+	name = "Berserker Rage",
 	talent = true,
-	cooldown = 20,
-	replaces = 355, -- Taunt
+	duration = 60,
+}
+
+LCT_SpellData[23920] = {
+	counterCC = true,
+	buff = 23920,
+	class = "WARRIOR",
+	name = "Spell Reflection",
+	charges = 1,
+	duration = { [SPEC_WARRIOR_PROT] = 20, [default] = 25, },
+}
+
+LCT_SpellData[46968] = {
+	cc = true,
+	name = "Shockwave",
+	buff = 46968,
+	duration = 40,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[64382] = {
+	other = true,
+	name = "Shattering Throw",
+	buff = 64382,
+	duration = 180,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[97462] = {
+	raidDefensive = true,
+	name = "Rallying Cry",
+	buff = 97463,
+	duration = 180,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[107570] = {
+	cc = true,
+	name = "Storm Bolt",
+	buff = 107570,
+	duration = 30,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[107574] = {
+	offensive = true,
+	name = "Avatar",
+	buff = 107574,
+	duration = 90,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[118038] = {
+	defensive = true,
+	name = "Die by the Sword",
+	buff = 118038,
+	duration = 120,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[167105] = {
+	offensive = true,
+	buff = 167105,
+	class = "WARRIOR",
+	name = "Colossus Smash",
+	talent = true,
+	duration = 45,
+}
+
+LCT_SpellData[184364] = {
+	defensive = true,
+	name = "Enraged Regeneration",
+	buff = 184364,
+	duration = 120,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[198817] = {
+	offensive = true,
+	name = "Sharpen Blade",
+	buff = 198817,
+	duration = 30,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[202168] = {
+	defensive = true,
+	name = "Impending Victory",
+	buff = 202168,
+	duration = 25,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[205800] = {
+	other = true,
+	name = "Oppressor",
+	buff = 205800,
+	duration = 20,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[206572] = {
+	other = true,
+	name = "Dragon Charge",
+	buff = 206572,
+	duration = 20,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[213871] = {
+	externalDefensive = true,
+	name = "Bodyguard",
+	buff = 213871,
+	duration = 15,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[227847] = {
+	offensive = true,
+	name = "Bladestorm",
+	buff = 227847,
+	duration = 90,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[228920] = {
+	offensive = true,
+	buff = 228920,
+	class = "WARRIOR",
+	name = "Ravager",
+	charges = 1,
+	duration = 90,
+}
+
+LCT_SpellData[236077] = {
+	disarm = true,
+	name = "Disarm",
+	buff = 236077,
+	duration = 45,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[236273] = {
+	defensive = true,
+	name = "Duel",
+	buff = 236273,
+	duration = 60,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[236320] = {
+	counterCC = true,
+	name = "War Banner",
+	buff = 236321,
+	duration = 90,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[260643] = {
+	offensive = true,
+	name = "Skullsplitter",
+	buff = 260643,
+	duration = 21,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[260708] = {
+	specID = { 71 }
+	offensive = true,
+	name = "Sweeping Strikes",
+	buff = 260708,
+	duration = 30,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[262161] = {
+	offensive = true,
+	name = "Warbreaker",
+	buff = 262161,
+	duration = 45,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[329038] = {
+	other = true,
+	name = "Bloodrage",
+	buff = 329038,
+	duration = 20,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[376079] = {
+	specID = { 376079, 321076 }
+	offensive = true,
+	name = "Spear of Bastion",
+	buff = 376079,
+	duration = 90,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[383762] = {
+	dispel = true,
+	name = "Bitter Immunity",
+	buff = 383762,
+	duration = 180,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[384100] = {
+	counterCC = true,
+	name = "Berserker Shout",
+	buff = 384100,
+	duration = 60,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[384110] = {
+	offensive = true,
+	name = "Wrecking Throw",
+	buff = 384110,
+	duration = 45,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[384318] = {
+	offensive = true,
+	name = "Thunderous Roar",
+	buff = 384318,
+	duration = 90,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[385059] = {
+	offensive = true,
+	name = "Odyn's Fury",
+	buff = 385059,
+	duration = 45,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[385952] = {
+	cc = true,
+	name = "Shield Charge",
+	buff = 385952,
+	duration = 45,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[386071] = {
+	interrupt = true,
+	name = "Disrupting Shout",
+	buff = 386071,
+	duration = 90,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[386394] = {
+	defensive = true,
+	name = "Battle-Scarred Veteran",
+	buff = 386394,
+	duration = 180,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[392966] = {
+	defensive = true,
+	name = "Spell Block",
+	buff = 392966,
+	duration = 90,
+	class = "WARRIOR",
+}
+
+LCT_SpellData[401150] = {
+	offensive = true,
+	name = "Avatar",
+	buff = 401150,
+	duration = 90,
+	class = "WARRIOR",
 }

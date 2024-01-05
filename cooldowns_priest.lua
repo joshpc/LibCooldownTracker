@@ -4,408 +4,452 @@ local SPEC_PRIEST_DISC = 256
 local SPEC_PRIEST_HOLY = 257
 local SPEC_PRIEST_SHADOW = 258
 
--- Smite
-LCT_SpellData[585] = {
-	class = "PRIEST",
-	reduce = { spellid = 88625, duration = 4 }, -- Chastise
-	hidden = true
-}
-
--- Priest/baseline
--- Shadow Word: Death
-LCT_SpellData[32379] = {
-	class = "PRIEST",
-	talent = true,
-	cooldown = 10,
-}
--- Power Infusion
-LCT_SpellData[10060] = {
-	class = "PRIEST",
-	talent = true,
-	offensive = true,
-	duration = 20,
-	cooldown = 120,
-}
--- Fade
-LCT_SpellData[586] = {
-	class = "PRIEST",
-	defensive = true,
-	duration = 1,
-	cooldown = 30
-}
--- Leap of Faith
-LCT_SpellData[73325] = {
-	class = "PRIEST",
-	talent = true,
-	defensive = true,
-	cooldown = 90,
-}
--- Desperate Prayer
-LCT_SpellData[19236] = {
-	class = "PRIEST",
-	defensive = true,
-	duration = 10,
-	cooldown = 90
-}
--- Mass Dispel
-LCT_SpellData[32375] = {
-	class = "PRIEST",
-	talent = true,
-	mass_dispel = true,
-	cooldown = 45
-}
--- Psychic Scream
-LCT_SpellData[8122] = {
-	class = "PRIEST",
-	cc = true,
-	cooldown = 30, -- Technically 45, but no one plays without the talent
-}
--- Priest/talents
--- Thoughtsteal
-LCT_SpellData[316262] = {
-	class = "PRIEST",
-	talent = true,
-	duration = 20,
-	cooldown = 90
-}
--- Priest/mixed
--- Purify
 LCT_SpellData[527] = {
-	class = "PRIEST",
+	specID = { 256, 257 }
 	dispel = true,
-	cooldown_starts_on_dispel = true,
-	cooldown = 8,
-	opt_charges = 2 -- With PVP talent, disc only
-}
--- Shadowfiend
-LCT_SpellData[34433] = {
+	name = "Purify",
+	buff = 527,
+	duration = 8,
 	class = "PRIEST",
-	talent = true,
-	offensive = true,
-	duration = 12,
-	cooldown = 180,
-}
--- Priest/mixed/talents
--- Divine Star
-LCT_SpellData[110744] = {
-	class = "PRIEST",
-	talent = true,
-	heal = true,
-	cooldown = 15
-}
--- Angelic Feather
-LCT_SpellData[121536] = {
-	class = "PRIEST",
-	talent = true,
-	charges = 3,
-	cooldown = 20
-}
--- Halo
-LCT_SpellData[120517] = {
-	class = "PRIEST",
-	talent = true,
-	heal = true,
-	cooldown = 40
 }
 
--- Priest/Discipline
--- Dark Archangel
-LCT_SpellData[197871] = {
+LCT_SpellData[586] = {
+	other = true,
+	name = "Fade",
+	buff = 586,
+	duration = 30,
 	class = "PRIEST",
-	specID = { SPEC_PRIEST_DISC },
-	talent = true,
-	offensive = true,
-	duration = 8,
-	cooldown = 60
-}
--- Archangel
-LCT_SpellData[197862] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_DISC },
-	talent = true,
-	offensive = true,
-	duration = 15,
-	cooldown = 60
-}
--- Penance
-LCT_SpellData[47540] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_DISC },
-	heal = true,
-	duration = 2,
-	cooldown = 9,
-}
--- Pain Suppression
-LCT_SpellData[33206] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_DISC },
-	defensive = true,
-	duration = 8,
-	cooldown = 180,
-	opt_charges = 2
-}
--- Power Word: Radiance
-LCT_SpellData[194509] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_DISC },
-	defensive = true,
-	cooldown = 20,
-	charges = 2,
-}
--- Power Word: Barrier
-LCT_SpellData[62618] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_DISC },
-	defensive = true,
-	duration = 10,
-	cooldown = 180,
-	opt_lower_cooldown = 90, -- with Dome of Light
-}
--- Rapture
-LCT_SpellData[47536] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_DISC },
-	defensive = true,
-	duration = 8,
-	cooldown = 90,
 }
 
--- Priest/Discipline/talents
--- Schism
-LCT_SpellData[214621] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_DISC },
-	talent = true,
-	offensive = true,
-	cooldown = 24,
-}
--- Power Word: Solace
-LCT_SpellData[129250] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_DISC },
-	talent = true,
-	offensive = true,
-	cooldown = 12,
-}
--- Evangelism
-LCT_SpellData[246287] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_DISC },
-	talent = true,
-	duration = 6,
-	cooldown = 90,
-}
--- Mindbender (Disc)
-LCT_SpellData[123040] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_DISC },
-	talent = true,
-	offensive = true,
-	duration = 12,
-	cooldown = 60,
-	replaces = 34433, -- Shadowfiend
-}
-
--- Priest/Holy
--- Symbol of hope
-LCT_SpellData[64901] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_HOLY },
-	talent = true,
-	defensive = true,
-	duration = 4,
-	cooldown = 180
-}
--- Prayer of Mending
-LCT_SpellData[33076] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_HOLY },
-	heal = true,
-	cooldown = 12
-}
--- Guardian Spirit
-LCT_SpellData[47788] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_HOLY },
-	defensive = true,
-	duration = 10,
-	cooldown = 180,
-	cooldown_on_full_aura_duration = 60,
-}
--- Apotheosis
-LCT_SpellData[200183] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_HOLY },
-	talent = true,
-	defensive = true,
-	duration = 20,
-	cooldown = 120,
-}
--- Divine Hymn
-LCT_SpellData[64843] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_HOLY },
-	heal = true,
-	duration = 8,
-	cooldown = 180, -- Seraphic Crescendo
-	opt_cooldown = 120,
-}
--- Holy Word: Chastise
-LCT_SpellData[88625] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_HOLY },
-	cc = true,
-	cooldown = 60
-}
--- Holy Word: Serenity
 LCT_SpellData[2050] = {
+	offensive = true,
+	buff = 2050,
 	class = "PRIEST",
-	specID = { SPEC_PRIEST_HOLY },
-	heal = true,
-	cooldown = 60,
-	opt_charges = 2
-}
--- Circle of Healing
-LCT_SpellData[204883] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_HOLY },
-	heal = true,
-	cooldown = 15,
-}
--- Priest/Holy/talents
--- Ray of Hope
-LCT_SpellData[197268] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_HOLY },
-	talent = true,
-	cooldown = 90,
-	duration = 6,
-}
--- Holy Word: Sanctify
-LCT_SpellData[34861] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_HOLY },
-	heal = true,
-	cooldown = 60,
-	opt_charges = 2,
-}
--- Holy Ward
-LCT_SpellData[213610] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_HOLY },
-	talent = true,
-	defensive = true,
-	cooldown = 45
-}
--- Holy Word: Salvation
-LCT_SpellData[265202] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_HOLY },
-	talent = true,
-	defensive = true,
-	cooldown = 720 -- 12min
-}
--- Divine Ascension
-LCT_SpellData[328530] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_HOLY },
-	talent = true,
-	cooldown = 60
-}
--- Greater Heal
-LCT_SpellData[289666] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_HOLY },
-	talent = true,
-	heal = true,
-	cooldown = 12
-}
--- Spirit of the Redeemer
-LCT_SpellData[215982] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_HOLY },
-	talent = true,
-	cooldown = 120,
-	duration = 8,
-	-- replaces = 20711 -- Spirit of Redemption
+	name = "Holy Word: Serenity",
+	charges = 1,
+	duration = 60,
 }
 
--- Priest/Shadow
--- Mind Blast
 LCT_SpellData[8092] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_SHADOW },
+	specID = { 256, 258 }
 	offensive = true,
-	cooldown = 9,
-}
--- Dispersion
-LCT_SpellData[47585] = {
+	name = "Mind Blast",
+	buff = 8092,
+	duration = { [256] = 24, [258] = 9, },
 	class = "PRIEST",
-	specID = { SPEC_PRIEST_SHADOW },
-	defensive = true,
-	duration = 6,
-	cooldown = 120, -- ?
 }
--- Vampiric Embrace
-LCT_SpellData[15286] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_SHADOW },
-	defensive = true,
-	duration = 12,
-	cooldown = 120
-}
--- Silence
-LCT_SpellData[15487] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_SHADOW },
-	silence = true,
-	cooldown = 45
-}
--- Priest/Shadow/talents
--- Void torrent
-LCT_SpellData[263165] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_SHADOW },
-	talent = true,
-	cooldown = 45
-}
--- Mindbender (Shadow)
-LCT_SpellData[200174] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_DISC },
-	talent = true,
-	offensive = true,
-	duration = 15,
-	cooldown = 60,
-	replaces = 34433, -- Shadowfiend
-}
--- Psychic Horror
-LCT_SpellData[64044] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_SHADOW },
-	talent = true,
+
+LCT_SpellData[8122] = {
 	cc = true,
-	cooldown = 45
-}
--- Void Shift
-LCT_SpellData[108968] = {
+	name = "Psychic Scream",
+	buff = 8122,
+	duration = 45,
 	class = "PRIEST",
-	_talent = true,
-	cooldown = 300
 }
--- Psyfiend
-LCT_SpellData[211522] = {
-	class = "PRIEST",
-	specID = { SPEC_PRIEST_SHADOW },
-	talent = true,
-	cooldown = 45,
-	duration = 12,
-}
--- Mindgames
-LCT_SpellData[375901] = {
-	class = "PRIEST",
-	covenant = "VENTHYR",
+
+LCT_SpellData[10060] = {
 	offensive = true,
-	duration = 5,
-	cooldown = 45,
+	name = "Power Infusion",
+	buff = 10060,
+	duration = 120,
+	class = "PRIEST",
+}
+
+LCT_SpellData[15286] = {
+	defensive = true,
+	name = "Vampiric Embrace",
+	buff = 15286,
+	duration = 120,
+	class = "PRIEST",
+}
+
+LCT_SpellData[15487] = {
+	interrupt = true,
+	name = "Silence",
+	buff = 15487,
+	duration = 45,
+	class = "PRIEST",
+}
+
+LCT_SpellData[19236] = {
+	defensive = true,
+	name = "Desperate Prayer",
+	buff = 19236,
+	duration = 90,
+	class = "PRIEST",
+}
+
+LCT_SpellData[32375] = {
+	dispel = true,
+	name = "Mass Dispel",
+	buff = 32375,
+	duration = 120,
+	class = "PRIEST",
+}
+
+LCT_SpellData[32379] = {
+	counterCC = true,
+	buff = 32379,
+	class = "PRIEST",
+	name = "Shadow Word: Death",
+	charges = 1,
+	duration = 10,
+}
+
+LCT_SpellData[33206] = {
+	externalDefensive = true,
+	name = "Pain Suppression",
+	buff = 33206,
+	duration = 180,
+	class = "PRIEST",
+}
+
+LCT_SpellData[34433] = {
+	offensive = true,
+	buff = 34433,
+	class = "PRIEST",
+	name = "Shadowfiend",
+	talent = true,
+	duration = 180,
+}
+
+LCT_SpellData[34861] = {
+	offensive = true,
+	buff = 34861,
+	class = "PRIEST",
+	name = "Holy Word: Sanctify",
+	charges = 1,
+	duration = 60,
+}
+
+LCT_SpellData[47536] = {
+	offensive = true,
+	name = "Rapture",
+	buff = 47536,
+	duration = 90,
+	class = "PRIEST",
+}
+
+LCT_SpellData[47585] = {
+	defensive = true,
+	name = "Dispersion",
+	buff = 47585,
+	duration = 120,
+	class = "PRIEST",
+}
+
+LCT_SpellData[47788] = {
+	externalDefensive = true,
+	name = "Guardian Spirit",
+	buff = 47788,
+	duration = 180,
+	class = "PRIEST",
+}
+
+LCT_SpellData[62618] = {
+	raidDefensive = true,
+	name = "Power Word: Barrier",
+	buff = 81782,
+	duration = 180,
+	class = "PRIEST",
+}
+
+LCT_SpellData[64044] = {
+	cc = true,
+	name = "Psychic Horror",
+	buff = 64044,
+	duration = 45,
+	class = "PRIEST",
+}
+
+LCT_SpellData[64843] = {
+	raidDefensive = true,
+	name = "Divine Hymn",
+	buff = 64843,
+	duration = 180,
+	class = "PRIEST",
+}
+
+LCT_SpellData[64901] = {
+	other = true,
+	name = "Symbol of Hope",
+	buff = 64901,
+	duration = 180,
+	class = "PRIEST",
+}
+
+LCT_SpellData[73325] = {
+	other = true,
+	name = "Leap of Faith",
+	buff = 73325,
+	duration = 90,
+	class = "PRIEST",
+}
+
+LCT_SpellData[88625] = {
+	cc = true,
+	name = "Holy Word: Chastise",
+	buff = 88625,
+	duration = 60,
+	class = "PRIEST",
+}
+
+LCT_SpellData[108920] = {
+	disarm = true,
+	name = "Void Tendrils",
+	buff = 108920,
+	duration = 60,
+	class = "PRIEST",
+}
+
+LCT_SpellData[108968] = {
+	defensive = true,
+	name = "Void Shift",
+	buff = 108968,
+	duration = 300,
+	class = "PRIEST",
+}
+
+LCT_SpellData[120517] = {
+	offensive = true,
+	name = "Halo",
+	buff = 120517,
+	duration = 40,
+	class = "PRIEST",
+}
+
+LCT_SpellData[120644] = {
+	offensive = true,
+	name = "Halo",
+	buff = 120644,
+	duration = 40,
+	class = "PRIEST",
+}
+
+LCT_SpellData[121536] = {
+	other = true,
+	buff = 121557,
+	class = "PRIEST",
+	name = "Angelic Feather",
+	charges = 3,
+	duration = 20,
+}
+
+LCT_SpellData[123040] = {
+	offensive = true,
+	name = "Mindbender",
+	buff = 123040,
+	duration = 60,
+	class = "PRIEST",
+}
+
+LCT_SpellData[197268] = {
+	externalDefensive = true,
+	name = "Ray of Hope",
+	buff = 197268,
+	duration = 90,
+	class = "PRIEST",
+}
+
+LCT_SpellData[197862] = {
+	offensive = true,
+	name = "Archangel",
+	buff = 197862,
+	duration = 60,
+	class = "PRIEST",
+}
+
+LCT_SpellData[197871] = {
+	offensive = true,
+	name = "Dark Archangel",
+	buff = 197871,
+	duration = 60,
+	class = "PRIEST",
+}
+
+LCT_SpellData[200174] = {
+	offensive = true,
+	name = "Mindbender",
+	buff = 200174,
+	duration = 60,
+	class = "PRIEST",
+}
+
+LCT_SpellData[200183] = {
+	offensive = true,
+	name = "Apotheosis",
+	buff = 200183,
+	duration = 120,
+	class = "PRIEST",
+}
+
+LCT_SpellData[205364] = {
+	cc = true,
+	name = "Dominate Mind",
+	buff = 205364,
+	duration = 30,
+	class = "PRIEST",
+}
+
+LCT_SpellData[205385] = {
+	offensive = true,
+	name = "Shadow Crash",
+	buff = 205385,
+	duration = 20,
+	class = "PRIEST",
+}
+
+LCT_SpellData[211522] = {
+	offensive = true,
+	name = "Psyfiend",
+	buff = 211522,
+	duration = 45,
+	class = "PRIEST",
+}
+
+LCT_SpellData[213610] = {
+	counterCC = true,
+	name = "Holy Ward",
+	buff = 213610,
+	duration = 45,
+	class = "PRIEST",
+}
+
+LCT_SpellData[213634] = {
+	dispel = true,
+	buff = 213634,
+	class = "PRIEST",
+	name = "Purify Disease",
+	charges = 1,
+	duration = 8,
+}
+
+LCT_SpellData[215769] = {
+	specID = { 215982 }
+	defensive = true,
+	name = "Spirit of the Redeemer",
+	buff = 215769,
+	duration = 120,
+	class = "PRIEST",
+}
+
+LCT_SpellData[228260] = {
+	offensive = true,
+	name = "Void Eruption",
+	buff = 228260,
+	duration = 120,
+	class = "PRIEST",
+}
+
+LCT_SpellData[246287] = {
+	offensive = true,
+	name = "Evangelism",
+	buff = 246287,
+	duration = 90,
+	class = "PRIEST",
+}
+
+LCT_SpellData[263165] = {
+	offensive = true,
+	name = "Void Torrent",
+	buff = 263165,
+	duration = 45,
+	class = "PRIEST",
+}
+
+LCT_SpellData[265202] = {
+	raidDefensive = true,
+	name = "Holy Word: Salvation",
+	buff = 265202,
+	duration = 720,
+	class = "PRIEST",
+}
+
+LCT_SpellData[271466] = {
+	raidDefensive = true,
+	name = "Luminous Barrier",
+	buff = 271466,
+	duration = 180,
+	class = "PRIEST",
+}
+
+LCT_SpellData[316262] = {
+	offensive = true,
+	name = "Thoughtsteal",
+	buff = 316262,
+	duration = 90,
+	class = "PRIEST",
+}
+
+LCT_SpellData[328530] = {
+	defensive = true,
+	name = "Divine Ascension",
+	buff = 328530,
+	duration = 60,
+	class = "PRIEST",
+}
+
+LCT_SpellData[372616] = {
+	offensive = true,
+	name = "Empyreal Blaze",
+	buff = 372616,
+	duration = 60,
+	class = "PRIEST",
+}
+
+LCT_SpellData[372760] = {
+	offensive = true,
+	name = "Divine Word",
+	buff = 372760,
+	duration = 60,
+	class = "PRIEST",
+}
+
+LCT_SpellData[372835] = {
+	raidDefensive = true,
+	name = "Lightwell",
+	buff = 372835,
+	duration = 120,
+	class = "PRIEST",
+}
+
+LCT_SpellData[373481] = {
+	offensive = true,
+	name = "Power Word: Life",
+	buff = 373481,
+	duration = 15,
+	class = "PRIEST",
+}
+
+LCT_SpellData[375901] = {
+	specID = { 375901, 321079 }
+	offensive = true,
+	name = "Mindgames",
+	buff = 375901,
+	duration = 45,
+	class = "PRIEST",
+}
+
+LCT_SpellData[391109] = {
+	offensive = true,
+	name = "Dark Ascension",
+	buff = 391109,
+	duration = 60,
+	class = "PRIEST",
+}
+
+LCT_SpellData[391124] = {
+	defensive = true,
+	name = "Restitution",
+	buff = 391124,
+	duration = 600,
+	class = "PRIEST",
+}
+
+LCT_SpellData[421453] = {
+	defensive = true,
+	name = "Ultimate Penitence",
+	buff = 421453,
+	duration = 240,
+	class = "PRIEST",
 }

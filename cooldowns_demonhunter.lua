@@ -1,239 +1,316 @@
--- ================ DEMON HUNTER ================
-
--- Specs
-local SPEC_DH_HAVOC     = 577
-local SPEC_DH_VENGEANCE = 581
-
--- Demon Hunter/baseline
--- Disrupt
-LCT_SpellData[183752] = {
-	class = "DEMONHUNTER",
-	interrupt = true,
-	cooldown = 15
-}
--- Imprison
-LCT_SpellData[217832] = {
-	class = "DEMONHUNTER",
-	cc = true,
-	_talent = true,
-	cooldown = 45
-}
--- Spectral Sight
-LCT_SpellData[320379] = {
-	class = "DEMONHUNTER",
-	duration = 10,
-	cooldown = 30
-}
-LCT_SpellData[188501] = 320379
--- Consume Magic
-LCT_SpellData[278326] = {
-	class = "DEMONHUNTER",
-	dispel = true,
-	cooldown = 10
-}
--- Vengeful Retreat
-LCT_SpellData[198793] = {
-	class = "DEMONHUNTER",
-	defensive = true,
-	cooldown = 25
-}
--- Fel Rush
-LCT_SpellData[195072] = {
-	class = "DEMONHUNTER",
-	cooldown = 10,
-	charges = 2
-}
--- Chaos Nova
 LCT_SpellData[179057] = {
+	cc = true,
+	name = "Chaos Nova",
+	buff = 179057,
+	duration = 45,
 	class = "DEMONHUNTER",
-	_talent = true,
-	stun = true,
-	cooldown = 60
-}
--- Metamorphosis
-LCT_SpellData[191427] = {
-	class = "DEMONHUNTER",
-	offensive = true,
-	duration = 24,
-	cooldown = 240
-}
--- DH/talents
--- Reverse Magic
-LCT_SpellData[205604] = {
-	class = "DEMONHUNTER",
-	talent = true,
-	cooldown = 60,
 }
 
--- DH/Havoc
--- Eye Beam
-LCT_SpellData[198013] = {
+LCT_SpellData[183752] = {
+	interrupt = true,
+	name = "Disrupt",
+	buff = 183752,
+	duration = 15,
 	class = "DEMONHUNTER",
-	specID = { SPEC_DH_HAVOC },
-	cooldown = 40,
-	duration = 2,
 }
--- Blur
-LCT_SpellData[198589] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_HAVOC },
-	defensive = true,
-	duration = 10,
-	cooldown = 60
-}
--- Blade Dance
-LCT_SpellData[188499] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_HAVOC },
-	cooldown = 15
-}
--- Darkness
-LCT_SpellData[196718] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_HAVOC },
-	defensive = true,
+
+LCT_SpellData[185245] = {
+	talent = true,
+	other = true,
+	name = "Torment",
+	buff = 185245,
 	duration = 8,
-	cooldown = 300
-}
--- DH/Havoc/talents
--- Netherwalk
-LCT_SpellData[196555] = {
 	class = "DEMONHUNTER",
-	specID = { SPEC_DH_HAVOC },
-	talent = true,
-	defensive = true,
-	duration = 6,
-	cooldown = 180
-}
--- Immolation Aura
-LCT_SpellData[258920] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_HAVOC },
-	talent = true,
-	duration = 6,
-	cooldown = 30
-}
--- Essence Break
-LCT_SpellData[258860] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_HAVOC },
-	talent = true,
-	duration = 4,
-	cooldown = 40,
-}
--- Fel Barrage
-LCT_SpellData[258925] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_HAVOC },
-	talent = true,
-	offensive = true,
-	duration = 3,
-	cooldown = 60,
-}
--- Fel Eruption
-LCT_SpellData[211881] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_HAVOC },
-	talent = true,
-	stun = true,
-	duration = 4,
-	cooldown = 30,
-}
--- Rain From Above
-LCT_SpellData[206803] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_HAVOC },
-	talent = true,
-	cooldown = 60,
 }
 
--- DH/Vengeance
--- Sigil of Misery
-LCT_SpellData[207684] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_VENGEANCE },
-	silence = true,
-	cooldown = 120,
-}
--- Sigil of Flame
-LCT_SpellData[204596] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_VENGEANCE },
-	cooldown = 30
-}
--- Sigil of Silence
-LCT_SpellData[202137] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_VENGEANCE },
-	silence = true,
-	cooldown = 60,
-}
--- Demon Spikes
-LCT_SpellData[203720] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_VENGEANCE },
-	cooldown = 20,
-	charges = 2,
-}
--- Fiery Brand
-LCT_SpellData[204021] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_VENGEANCE },
-	offensive = true,
-	cooldown = 60,
-	charges = 2,
-}
--- Infernal Strike
-LCT_SpellData[189110] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_VENGEANCE },
-	charges = 2,
-	cooldown = 20,
-}
--- DH/Vengeance/talents
--- Sigil of Chains
-LCT_SpellData[202138] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_VENGEANCE },
-	talent = true,
-	cooldown = 60
-}
--- Fel Devastation
-LCT_SpellData[212084] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_VENGEANCE },
-	talent = true,
-	offensive = true,
-	cooldown = 60
-}
--- Demonic Trample
-LCT_SpellData[205629] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_VENGEANCE },
-	talent = true,
-	cooldown = 20
-}
--- Illidan's Grasp
-LCT_SpellData[205630] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_VENGEANCE },
-	talent = true,
-	stun = true,
-	cooldown = 60
-}
--- Fracture
-LCT_SpellData[263642] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_VENGEANCE },
-	talent = true,
-	cooldown = 4.5,
-	-- replaces = 203782, -- V: this is Shear, but it has no CD
-}
--- Soul Barrier
-LCT_SpellData[263648] = {
-	class = "DEMONHUNTER",
-	specID = { SPEC_DH_VENGEANCE },
-	talent = true,
+LCT_SpellData[187827] = {
+	specID = { 581 }
 	defensive = true,
-	cooldown = 30,
+	name = "Metamorphosis",
+	buff = 187827,
+	duration = 180,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[188501] = {
+	other = true,
+	name = "Spectral Sight",
+	buff = 188501,
+	duration = 30,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[189110] = {
+	other = true,
+	buff = 189110,
+	class = "DEMONHUNTER",
+	name = "Infernal Strike",
+	charges = 2,
+	specID = { 581 }
+	duration = 20,
+}
+
+LCT_SpellData[191427] = {
+	specID = { 577 }
+	offensive = true,
+	name = "Metamorphosis",
+	buff = 162264,
+	duration = 180,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[196555] = {
+	defensive = true,
+	name = "Netherwalk",
+	buff = 196555,
+	duration = 180,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[196718] = {
+	raidDefensive = true,
+	name = "Darkness",
+	buff = 209426,
+	duration = 300,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[198013] = {
+	offensive = true,
+	name = "Eye Beam",
+	buff = 198013,
+	duration = 40,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[198589] = {
+	specID = { 577 }
+	defensive = true,
+	name = "Blur",
+	buff = 212800,
+	duration = 60,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[198793] = {
+	other = true,
+	name = "Vengeful Retreat",
+	buff = 198793,
+	duration = 25,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[202137] = {
+	disarm = true,
+	name = "Sigil of Silence",
+	buff = 202137,
+	duration = 60,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[202138] = {
+	disarm = true,
+	name = "Sigil of Chains",
+	buff = 202138,
+	duration = 60,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[203720] = {
+	defensive = true,
+	buff = 203720,
+	class = "DEMONHUNTER",
+	name = "Demon Spikes",
+	charges = 2,
+	specID = { 581 }
+	duration = 20,
+}
+
+LCT_SpellData[204021] = {
+	defensive = true,
+	buff = 204021,
+	class = "DEMONHUNTER",
+	name = "Fiery Brand",
+	charges = 1,
+	duration = 60,
+}
+
+LCT_SpellData[204596] = {
+	offensive = true,
+	name = "Sigil of Flame",
+	buff = 204596,
+	duration = 30,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[205604] = {
+	counterCC = true,
+	name = "Reverse Magic",
+	buff = 205604,
+	duration = 60,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[205629] = {
+	other = true,
+	buff = 205629,
+	class = "DEMONHUNTER",
+	name = "Demonic Trample",
+	charges = 2,
+	duration = 20,
+}
+
+LCT_SpellData[205630] = {
+	cc = true,
+	name = "Illidan's Grasp",
+	buff = 205630,
+	duration = 60,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[206803] = {
+	defensive = true,
+	name = "Rain from Above",
+	buff = 206803,
+	duration = 60,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[207029] = {
+	other = true,
+	name = "Tormentor",
+	buff = 207029,
+	duration = 20,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[207407] = {
+	offensive = true,
+	name = "Soul Carver",
+	buff = 207407,
+	duration = 60,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[207684] = {
+	cc = true,
+	name = "Sigil of Misery",
+	buff = 207684,
+	duration = 120,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[209258] = {
+	defensive = true,
+	name = "Last Resort",
+	buff = 209258,
+	duration = 480,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[211881] = {
+	specID = { 577 }
+	cc = true,
+	name = "Fel Eruption",
+	buff = 211881,
+	duration = 30,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[212084] = {
+	offensive = true,
+	name = "Fel Devastation",
+	buff = 212084,
+	duration = 40,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[217832] = {
+	cc = true,
+	name = "Imprison",
+	buff = 217832,
+	duration = 45,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[232893] = {
+	other = true,
+	name = "Felblade",
+	buff = 232893,
+	duration = 15,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[258860] = {
+	offensive = true,
+	name = "Essence Break",
+	buff = 258860,
+	duration = 40,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[258920] = {
+	offensive = true,
+	name = "Immolation Aura",
+	buff = 258920,
+	duration = { [581] = 15, [default] = 30, },
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[258925] = {
+	offensive = true,
+	name = "Fel Barrage",
+	buff = 258925,
+	duration = 90,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[263648] = {
+	defensive = true,
+	name = "Soul Barrier",
+	buff = 263648,
+	duration = 30,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[278326] = {
+	dispel = true,
+	name = "Consume Magic",
+	buff = 278326,
+	duration = 10,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[320341] = {
+	defensive = true,
+	name = "Bulk Extraction",
+	buff = 320341,
+	duration = 60,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[342817] = {
+	offensive = true,
+	name = "Glaive Tempest",
+	buff = 342817,
+	duration = 25,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[370965] = {
+	specID = { 370965, 321077 }
+	offensive = true,
+	name = "The Hunt",
+	buff = 370965,
+	duration = 90,
+	class = "DEMONHUNTER",
+}
+
+LCT_SpellData[390163] = {
+	specID = { 390163, 321076 }
+	offensive = true,
+	name = "Elysian Decree",
+	buff = 390163,
+	duration = 60,
+	class = "DEMONHUNTER",
 }

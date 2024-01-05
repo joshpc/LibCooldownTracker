@@ -1,468 +1,324 @@
--- ================ WARLOCK ================
-
-local SPEC_WARLOCK_AFFLICTION  = 265
-local SPEC_WARLOCK_DEMONOLOGY  = 266
-local SPEC_WARLOCK_DESTRUCTION = 267
-
--- Warlock/baseline
--- Soulstone
-LCT_SpellData[20707] = {
-	class = "WARLOCK",
-	res = true,
-	cooldown = 600
-}
--- Nether Ward
-LCT_SpellData[212295] = {
-	class = "WARLOCK",
-	defensive = true,
-	talent = true,
-	duration = 3,
-	cooldown = 45
-}
--- Demonic Circle: Teleport
-LCT_SpellData[48020] = {
-	class = "WARLOCK",
-	defensive = true,
-	cooldown = 30
-}
--- Shadowfury
-LCT_SpellData[30283] = {
-	class = "WARLOCK",
-	stun = true,
-	cooldown = 60
-}
--- Unending Resolve
-LCT_SpellData[104773] = {
-	class = "WARLOCK",
-	defensive = true,
-	duration = 8,
-	cooldown = 180
-}
--- Warlock/talents
--- Mortal Coil
-LCT_SpellData[6789] = {
-	class = "WARLOCK",
-	_talent = true,
-	cc = true,
-	heal = true,
-	cooldown = 45
-}
--- Dark Pact
-LCT_SpellData[108416] = {
-	class = "WARLOCK",
-	_talent = true,
-	defensive = true,
-	duration = 20,
-	cooldown = 60
-}
--- Nether Ward
-LCT_SpellData[212295] = {
-	class = "WARLOCK",
-	talent = true,
-	defensive = true,
-	cooldown = 45
-}
--- Warlock/mixed/talents
--- Grimoire of Sacrifice
-LCT_SpellData[108503] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_AFFLICTION, SPEC_WARLOCK_DESTRUCTION },
-	talent = true,
-	cooldown = 30
-}
--- Howl of Terror
-LCT_SpellData[5484] = {
-	class = "WARLOCK",
-	talent = true,
-	cc = true,
-	cooldown = 40
-}
--- Shadow Rift
-LCT_SpellData[353294] = {
-	class = "WARLOCK",
-	talent = true,
-	cooldown = 60,
-	duration = 2
-}
-
--- Warlock/Affliction
--- Summon Darkglare
-LCT_SpellData[205180] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_AFFLICTION },
-	offensive = true,
-	duration = 20,
-	cooldown = 120
-}
--- Warlock/Affliction/talents
--- Vile Taint
-LCT_SpellData[278350] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_AFFLICTION },
-	talent = true,
-	cooldown = 30
-}
--- Curse of Shadows
-LCT_SpellData[234877] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_AFFLICTION },
-	talent = true,
-	cooldown = 30
-}
--- Dark Soul: Misery
-LCT_SpellData[113860] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_AFFLICTION },
-	talent = true,
-	duration = 20,
-	cooldown = 120
-}
--- Rapid Contagion
-LCT_SpellData[344566] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_AFFLICTION },
-	talent = true,
-	offensive = true,
-	cooldown = 30
-}
--- Deathbolt
-LCT_SpellData[264106] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_AFFLICTION },
-	talent = true,
-	offensive = true,
-	cooldown = 30,
-}
--- Haunt
-LCT_SpellData[48181] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_AFFLICTION },
-	talent = true,
-	cooldown = 15
-}
--- Phantom Singularity
-LCT_SpellData[205179] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_AFFLICTION },
-	talent = true,
-	cooldown = 45
-}
-
--- Warlock/Demonology
--- Call Dreadstalkers
-LCT_SpellData[104316] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DEMONOLOGY },
-	offensive = true,
-	duration = 12,
-	cooldown = 20
-}
--- Summon Demonic Tyrant
-LCT_SpellData[265187] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DEMONOLOGY },
-	offensive = true,
-	duration = 15,
-	cooldown = 90
-}
--- Warlock/Demonology/talents
--- Nether Portal
-LCT_SpellData[267217] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DEMONOLOGY },
-	talent = true,
-	duration = 15,
-	cooldown = 180
-}
--- Summon Vilefiend
-LCT_SpellData[264119] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DEMONOLOGY },
-	talent = true,
-	duration = 15,
-	cooldown = 45
-}
--- Power Siphon
-LCT_SpellData[264130] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DEMONOLOGY },
-	talent = true,
-	cooldown = 30
-}
--- Singe Magic
-LCT_SpellData[212623] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DEMONOLOGY },
-	talent = true,
-	cooldown = 15
-}
--- Soul Strike
-LCT_SpellData[264057] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DEMONOLOGY },
-	talent = true,
-	offensive = true,
-	cooldown = 10
-}
--- Grimoire: Felguard
-LCT_SpellData[111898] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DEMONOLOGY },
-	talent = true,
-	offensive = true,
-	duration = 15,
-	cooldown = 120
-}
--- Call Fel Lord
-LCT_SpellData[212459] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DEMONOLOGY },
-	talent = true,
-	offensive = true,
-	duration = 30,
-	cooldown = 120
-}
--- Bilescourge Bombers
-LCT_SpellData[267211] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DEMONOLOGY },
-	talent = true,
-	offensive = true,
-	duration = 6,
-	cooldown = 30
-}
--- Demonic Strength
-LCT_SpellData[267171] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DEMONOLOGY },
-	talent = true,
-	cooldown = 60
-}
--- Call Observer
-LCT_SpellData[201996] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DEMONOLOGY },
-	talent = true,
-	offensive = true,
-	duration = 20,
-	cooldown = 60
-}
--- Fel Obelisk
-LCT_SpellData[353601] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DEMONOLOGY },
-	talent = true,
-	offensive = true,
-	cooldown = 45
-}
-
--- Warlock/Destruction
--- Havoc
-LCT_SpellData[80240] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DESTRUCTION },
-	offensive = true,
-	duration = 10,
-	cooldown = 30
-}
--- Summon Infernal
 LCT_SpellData[1122] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DESTRUCTION },
 	offensive = true,
-	duration = 30,
-	cooldown = 180
-}
--- Conflagrate
-LCT_SpellData[17962] = {
+	name = "Summon Infernal",
+	buff = 1122,
+	duration = 180,
 	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DESTRUCTION },
-	offensive = true,
-	charges = 2,
-	cooldown = 13
 }
--- Warlock/Destruction/talents
--- Bane of Havoc
-LCT_SpellData[200546] = {
+
+LCT_SpellData[5484] = {
+	cc = true,
+	name = "Howl of Terror",
+	buff = 5484,
+	duration = 40,
 	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DESTRUCTION },
-	offensive = true,
-	duration = 10,
-	cooldown = 45,
-	replaces = 80240 -- Havoc
 }
--- Cataclysm
-LCT_SpellData[152108] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DESTRUCTION },
-	talent = true,
-	offensive = true,
-	cooldown = 30
-}
--- Channel Demonfire
-LCT_SpellData[196447] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DESTRUCTION },
-	talent = true,
-	offensive = true,
-	duration = 3,
-	cooldown = 25
-}
--- Soul Fire
+
 LCT_SpellData[6353] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DESTRUCTION },
-	talent = true,
 	offensive = true,
-	cooldown = 45, -- reduced by 2s for every Soul Shard spent
-}
--- Dark Soul: Instability
-LCT_SpellData[113858] = {
+	name = "Soul Fire",
+	buff = 6353,
+	duration = 45,
 	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DESTRUCTION },
-	talent = true,
-	offensive = true,
-	duration = 20,
-	cooldown = 120
-}
--- Shadowburn
-LCT_SpellData[17877] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DESTRUCTION },
-	talent = true,
-	charges = 2,
-	offensive = true,
-	cooldown = 12
-}
--- Bonds of Fel
-LCT_SpellData[353753] = {
-	class = "WARLOCK",
-	specID = { SPEC_WARLOCK_DESTRUCTION },
-	talent = true,
-	cooldown = 30
 }
 
--- Warlock/Felguard
--- Axe Toss
-LCT_SpellData[89766] = {
+LCT_SpellData[6789] = {
+	cc = true,
+	name = "Mortal Coil",
+	buff = 6789,
+	duration = 45,
 	class = "WARLOCK",
-	pet = true,
-	stun = true,
-	cooldown = 30
 }
--- Felstorm
+
+LCT_SpellData[30283] = {
+	cc = true,
+	name = "Shadowfury",
+	buff = 30283,
+	duration = 60,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[48020] = {
+	other = true,
+	name = "Demonic Circle: Teleport",
+	buff = 48020,
+	duration = 30,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[80240] = {
+	other = true,
+	buff = 80240,
+	class = "WARLOCK",
+	name = "Havoc",
+	talent = true,
+	duration = 30,
+}
+
 LCT_SpellData[89751] = {
-	class = "WARLOCK",
-	pet = true,
+	specID = { 266 }
 	offensive = true,
-	cooldown = 30
-}
--- Pursuit
-LCT_SpellData[30151] = {
+	name = "Felstorm",
+	buff = 89751,
+	duration = 30,
 	class = "WARLOCK",
-	pet = true,
+}
+
+LCT_SpellData[104316] = {
 	offensive = true,
-	cooldown = 15
-}
-
--- Warlock/Felhunter
--- Devour Magic
-LCT_SpellData[19505] = {
-	class = "WARLOCK",
-	pet = true,
-	purge = true,
-	cooldown = 15
-}
--- Spell Lock
-LCT_SpellData[19647] = {
-	class = "WARLOCK",
-	pet = true,
-	interrupt = true,
-	silence = true,
-	cooldown = 24
-}
-LCT_SpellData[132409] = 19647
-
--- Warlock/Pet/Observer
--- Optical Blast
-LCT_SpellData[115781] = {
-	class = "WARLOCK",
-	pet = true,
-	interrupt = true,
-	silence = true,
-	cooldown = 24
-}
-LCT_SpellData[119911] = 115781
-
--- Warlock/Pet/Fel Imp
--- Sear Magic
-LCT_SpellData[115276] = {
-	class = "WARLOCK",
-	pet = true,
-	dispel = true,
-	cooldown = 10
-}
-
--- Warlock/Pet/Imp
--- Cauterize Master
-LCT_SpellData[119899] = {
-	class = "WARLOCK",
-	pet = true,
-	heal = true,
-	duration = 12,
-	cooldown = 30
-}
--- Flee
-LCT_SpellData[89792] = {
-	class = "WARLOCK",
-	pet = true,
-	defensive = true,
-	cooldown = 20
-}
--- Single Magic
-LCT_SpellData[89808] = {
-	class = "WARLOCK",
-	pet = true,
-	dispel = true,
-	cooldown = 10
-}
-
--- Warlock/Pet/Shivarra
--- Fellash
-LCT_SpellData[115770] = {
-	class = "WARLOCK",
-	pet = true,
-	offensive = true,
-	knockback = true,
-	cooldown = 6
-}
-
--- Warlock/Pet/Succubus
--- Whiplash
-LCT_SpellData[6360] = {
-	class = "WARLOCK",
-	pet = true,
-	offensive = true,
-	knockback = true,
-	cooldown = 6
-}
-
--- Warlock/Pet/Voidwalker
--- Shadow Bulwark
-LCT_SpellData[17767] = {
-	class = "WARLOCK",
-	pet = true,
-	defensive = true,
+	name = "Call Dreadstalkers",
+	buff = 104316,
 	duration = 20,
-	cooldown = 120
+	class = "WARLOCK",
 }
 
--- Warlock/Wrathguard
--- Wrathstorm
-LCT_SpellData[115831] = {
+LCT_SpellData[104773] = {
+	defensive = true,
+	name = "Unending Resolve",
+	buff = 104773,
+	duration = 180,
 	class = "WARLOCK",
-	pet = true,
+}
+
+LCT_SpellData[108416] = {
+	defensive = true,
+	name = "Dark Pact",
+	buff = 108416,
+	duration = 60,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[108503] = {
+	other = true,
+	name = "Grimoire of Sacrifice",
+	buff = 108503,
+	duration = 30,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[111898] = {
+	cc = true,
+	name = "Grimoire: Felguard",
+	buff = 111898,
+	duration = 120,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[113942] = {
+	specID = { 111771 }
+	other = true,
+	name = "Demonic Gateway",
+	buff = 113942,
+	duration = 90,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[119898] = {
+	interrupt = true,
+	name = "Command Demon",
+	buff = 119898,
+	duration = 24,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[152108] = {
 	offensive = true,
-	duration = 6,
-	cooldown = 45
+	name = "Cataclysm",
+	buff = 152108,
+	duration = 30,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[196447] = {
+	offensive = true,
+	name = "Channel Demonfire",
+	buff = 196447,
+	duration = 25,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[200546] = {
+	other = true,
+	name = "Bane of Havoc",
+	buff = 200546,
+	duration = 45,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[201996] = {
+	offensive = true,
+	name = "Call Observer",
+	buff = 201996,
+	duration = 60,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[205179] = {
+	offensive = true,
+	name = "Phantom Singularity",
+	buff = 205179,
+	duration = 45,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[205180] = {
+	offensive = true,
+	name = "Summon Darkglare",
+	buff = 205180,
+	duration = 120,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[212295] = {
+	counterCC = true,
+	name = "Nether Ward",
+	buff = 212295,
+	duration = 45,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[212459] = {
+	offensive = true,
+	name = "Call Fel Lord",
+	buff = 212459,
+	duration = 120,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[264119] = {
+	offensive = true,
+	name = "Summon Vilefiend",
+	buff = 264119,
+	duration = 45,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[264130] = {
+	offensive = true,
+	name = "Power Siphon",
+	buff = 264130,
+	duration = 30,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[265187] = {
+	offensive = true,
+	name = "Summon Demonic Tyrant",
+	buff = 265273,
+	duration = 90,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[267171] = {
+	offensive = true,
+	name = "Demonic Strength",
+	buff = 267171,
+	duration = 60,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[267211] = {
+	offensive = true,
+	name = "Bilescourge Bombers",
+	buff = 267211,
+	duration = 30,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[267217] = {
+	offensive = true,
+	name = "Nether Portal",
+	buff = 267218,
+	duration = 180,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[278350] = {
+	offensive = true,
+	name = "Vile Taint",
+	buff = 278350,
+	duration = 30,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[328774] = {
+	offensive = true,
+	name = "Amplify Curse",
+	buff = 328774,
+	duration = 60,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[333889] = {
+	other = true,
+	name = "Fel Domination",
+	buff = 333889,
+	duration = 180,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[353294] = {
+	other = true,
+	name = "Shadow Rift",
+	buff = 353294,
+	duration = 60,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[353601] = {
+	offensive = true,
+	name = "Fel Obelisk",
+	buff = 353601,
+	duration = 45,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[353753] = {
+	offensive = true,
+	name = "Bonds of Fel",
+	buff = 353753,
+	duration = 30,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[386833] = {
+	offensive = true,
+	name = "Guillotine",
+	buff = 386833,
+	duration = 45,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[386951] = {
+	offensive = true,
+	name = "Soul Swap",
+	buff = 386951,
+	duration = 30,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[386997] = {
+	specID = { 386997, 321077 }
+	offensive = true,
+	name = "Soul Rot",
+	buff = 386997,
+	duration = 60,
+	class = "WARLOCK",
+}
+
+LCT_SpellData[387976] = {
+	offensive = true,
+	buff = 387976,
+	class = "WARLOCK",
+	name = "Dimensional Rift",
+	charges = 3,
+	duration = 45,
+}
+
+LCT_SpellData[417537] = {
+	offensive = true,
+	name = "Oblivion",
+	buff = 417537,
+	duration = 45,
+	class = "WARLOCK",
 }
