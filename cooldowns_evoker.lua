@@ -1,352 +1,342 @@
--- ================ EVOKER ================
-
-local SPEC_EVOKER_DEVASTATION = 1467
-local SPEC_EVOKER_PRESERVATION = 1468
-local SPEC_EVOKER_AUGMENTATION = 1473
-
--- Evoker/Baseline
--- Fire Breath
-LCT_SpellData[357208] = {
-	class = "EVOKER",
-	cooldown = 30,
-	-- TODO: Fire Breath's CD is reduced when consuming essence bursts when
-	--       talented into 'Feed the Flames'
-}
--- Blessing of the Bronze
-LCT_SpellData[364342] = {
-	class = "EVOKER",
-	cooldown = 15
-}
--- Hover
-LCT_SpellData[358267] = {
-	class = "EVOKER",
-	cooldown = 35,
-	opt_charges = 2 -- Hover gets two charges with the 'Aerial Mastery' talent
-}
--- Deep Breath
-LCT_SpellData[357210] = {
-	class = "EVOKER",
-	cooldown = 120,
-	opt_lower_cooldown = 60 -- Reduced by the 'Onyx Legacy' talent
-}
--- Fury of the Aspects
-LCT_SpellData[390386] = {
-	class = "EVOKER",
-	cooldown = 300
-}
--- Emerald Blossom
-LCT_SpellData[355913] = {
-	class = "EVOKER",
-	cooldown = 30,
-	heal = true,
-}
--- Evoker/talents
--- Obsidian Scales
-LCT_SpellData[363916] = {
-	class = "EVOKER",
-	_talent = true,
-	duration = 12,
-	cooldown = 90,
-	defensive = true,
-	opt_charges = 2 -- With the Obsidian Bulwalk talent
-}
--- Oppressing Roar
-LCT_SpellData[372048] = {
-	class = "EVOKER",
-	talent = true,
-	cooldown = 120,
-	duration = 10
-	-- TODO: Oppressing Roar's cooldown can be reduced when talented into 'Overawe'
-	--       which reduces the CD by 20s/Enrage removed.
-}
--- Sleep Walk
-LCT_SpellData[360806] = {
-	class = "EVOKER",
-	talent = true,
-	cooldown = 15,
-	cc = true,
-}
--- Unravel
-LCT_SpellData[368432] = {
-	class = "EVOKER",
-	talent = true,
-	cooldown = 9
-}
--- Expunge
-LCT_SpellData[365585] = {
-	class = "EVOKER",
-	talent = true,
-	cooldown = 8,
-	dispel = true,
-	cooldown_starts_on_dispel = true
-}
--- Cauterizing Flame
-LCT_SpellData[374251] = {
-	class = "EVOKER",
-	talent = true,
-	cooldown = 60,
-	dispel = true,
-	cooldown_starts_on_dispel = true,
-	heal = true,
-}
--- Landslide
-LCT_SpellData[358385] = {
-	class = "EVOKER",
-	talent = true,
-	cooldown = 90,
-}
--- Quell
 LCT_SpellData[351338] = {
-	class = "EVOKER",
-	_talent = true,
-	cooldown = 40,
 	interrupt = true,
-	opt_lower_cooldown = 20 -- Reduced by the 'Imposing Presence' talent
-}
--- Renewing Blaze
-LCT_SpellData[374348] = {
+	name = "Quell",
+	buff = 351338,
+	duration = 40,
 	class = "EVOKER",
-	talent = true,
-	cooldown = 90,
-	duration = 8,
-	heal = true,
+}
+
+LCT_SpellData[355913] = {
+	specID = { 1467 }
 	defensive = true,
-}
--- Rescue
-LCT_SpellData[370665] = {
+	name = "Emerald Blossom",
+	buff = 355913,
+	duration = 30,
 	class = "EVOKER",
-	_talent = true,
-	cooldown = 60
-}
--- Verdant Embrace
-LCT_SpellData[360995] = {
-	class = "EVOKER",
-	talent = true,
-	cooldown = 24,
-	heal = true
-}
--- Tip the Scales
-LCT_SpellData[370553] = {
-	class = "EVOKER",
-	_talent = true,
-	cooldown = 120,
-	cooldown_starts_on_aura_fade = true,
-}
--- Time Spiral
-LCT_SpellData[374968] = {
-	class = "EVOKER",
-	talent = true,
-	cooldown = 120
-}
--- Zephyr
-LCT_SpellData[374227] = {
-	class = "EVOKER",
-	talent = true,
-	duration = 8,
-	cooldown = 120
 }
 
--- Evoker/Devastation/talents
--- Dragonrage
-LCT_SpellData[375087] = {
-	class = "EVOKER",
-	specID = { SPEC_EVOKER_DEVASTATION },
-	talent = true,
-	offensive = true,
-	cooldown = 120
-}
--- Eternity Surge
-LCT_SpellData[359073] = {
-	class = "EVOKER",
-	specID = { SPEC_EVOKER_DEVASTATION },
-	talent = true,
-	cooldown = 30
-}
--- Shattering Star
-LCT_SpellData[370452] = {
-	class = "EVOKER",
-	specID = { SPEC_EVOKER_DEVASTATION },
-	talent = true,
-	offensive = true,
-	cooldown = 20
-}
--- Firestorm
-LCT_SpellData[368847] = {
-	class = "EVOKER",
-	specID = { SPEC_EVOKER_DEVASTATION },
-	talent = true,
-	cooldown = 20
-}
-
--- Evoker/Preservation/talents
--- Naturalize
-LCT_SpellData[360823] = {
-	class = "EVOKER",
-	specID = { SPEC_EVOKER_PRESERVATION },
-	talent = true,
-	cooldown = 8,
-	dispel = true,
-	cooldown_starts_on_dispel = true
-}
--- Dream Breath
-LCT_SpellData[355936] = {
-	class = "EVOKER",
-	specID = { SPEC_EVOKER_PRESERVATION },
-	talent = true,
-	cooldown = 30,
-	heal = true,
-}
--- Temporal Anomaly
-LCT_SpellData[373861] = {
-	class = "EVOKER",
-	specID = { SPEC_EVOKER_PRESERVATION },
-	talent = true,
-	duration = 6,
-	cooldown = 15,
-	heal = true,
-}
--- Time Dilation
 LCT_SpellData[357170] = {
+	externalDefensive = true,
+	name = "Time Dilation",
+	buff = 357170,
+	duration = 60,
 	class = "EVOKER",
-	specID = { SPEC_EVOKER_PRESERVATION },
-	talent = true,
-	cooldown = 60,
-	duration = 8,
 }
--- Spiritbloom
-LCT_SpellData[367226] = {
+
+LCT_SpellData[357210] = {
+	offensive = true,
+	name = "Deep Breath",
+	buff = 357210,
+	duration = 120,
 	class = "EVOKER",
-	specID = { SPEC_EVOKER_PRESERVATION },
-	talent = true,
-	cooldown = 30,
-	heal = true,
-	opt_lower_cooldown = 20 -- Reduced by the 'Spiritual Clarity' talent
 }
--- Rewind
-LCT_SpellData[363534] = {
+
+LCT_SpellData[358267] = {
+	other = true,
+	name = "Hover",
+	buff = 358267,
+	duration = 35,
 	class = "EVOKER",
-	specID = { SPEC_EVOKER_PRESERVATION },
-	talent = true,
-	cooldown = 240,
-	heal = true,
-	opt_lower_cooldown = 180 -- Reduced by the 'Temporal Artificer' talent
 }
--- Stasis
-LCT_SpellData[370537] = {
+
+LCT_SpellData[358385] = {
+	disarm = true,
+	name = "Landslide",
+	buff = 358385,
+	duration = 90,
 	class = "EVOKER",
-	specID = { SPEC_EVOKER_PRESERVATION },
-	talent = true,
-	cooldown = 90
 }
--- Reversion
-LCT_SpellData[366155] = {
+
+LCT_SpellData[359073] = {
+	offensive = true,
+	name = "Eternity Surge",
+	buff = 359073,
+	duration = 30,
 	class = "EVOKER",
-	specID = { SPEC_EVOKER_PRESERVATION },
-	talent = true,
-	cooldown = 9,
-	opt_charges = 2, -- Charges added with the 'Punctuality' talent
-	heal = true
 }
--- Dream Flight
+
 LCT_SpellData[359816] = {
+	offensive = true,
+	name = "Dream Flight",
+	buff = 359816,
+	duration = 120,
 	class = "EVOKER",
-	specID = { SPEC_EVOKER_PRESERVATION },
-	talent = true,
-	cooldown = 120,
-	heal = true
-}
--- Emerald Communion
-LCT_SpellData[370960] = {
-	class = "EVOKER",
-	specID = { SPEC_EVOKER_PRESERVATION },
-	talent = true,
-	duration = 5,
-	cooldown = 180,
-	heal = true
-}
--- Evoker/talents
--- Nullifying Shroud
-LCT_SpellData[378464] = {
-	class = "EVOKER",
-	talent = true,
-	cooldown = 90
-}
--- Chrono Loop
-LCT_SpellData[383005] = {
-	class = "EVOKER",
-	talent = true,
-	cooldown = 60
-}
--- Time Stop
-LCT_SpellData[378441] = {
-	class = "EVOKER",
-	talent = true,
-	duration = 4,
-	cooldown = 60,
-	defensive = true
-}
--- Swoop Up
-LCT_SpellData[370388] = {
-	class = "EVOKER",
-	talent = true,
-	cooldown = 90
 }
 
--- Evoker/Augmentation/talents
--- Time Skip
-LCT_SpellData[404977] = {
+LCT_SpellData[360806] = {
+	cc = true,
+	name = "Sleep Walk",
+	buff = 360806,
+	duration = 15,
 	class = "EVOKER",
-	specID = { SPEC_EVOKER_AUGMENTATION },
-	talent = true,
-	cooldown = 180,
-	reduce = {
-		all = true,
-		duration = 30,
-	}
 }
--- Prescience
-LCT_SpellData[409311] = {
-	class = "EVOKER",
-	specID = { SPEC_EVOKER_AUGMENTATION },
-	talent = true,
-	cooldown = 12
-}
--- Spatial Paradox
-LCT_SpellData[406732] = {
-	class = "EVOKER",
-	specID = { SPEC_EVOKER_AUGMENTATION },
-	talent = true,
-	duration = 10,
-	cooldown = 120
-}
--- Bestow Weyrnstone
-LCT_SpellData[408233] = {
-	class = "EVOKER",
-	specID = { SPEC_EVOKER_AUGMENTATION },
-	talent = true,
-	cooldown = 60
-}
--- Blistering Scales
+
 LCT_SpellData[360827] = {
+	defensive = true,
+	name = "Blistering Scales",
+	buff = 360827,
+	duration = 30,
 	class = "EVOKER",
-	specID = { SPEC_EVOKER_AUGMENTATION },
-	talent = true,
-	cooldown = 30
-}
--- Upheaval
-LCT_SpellData[396286] = {
-	class = "EVOKER",
-	specID = { SPEC_EVOKER_AUGMENTATION },
-	talent = true,
-	cooldown = 40
 }
 
+LCT_SpellData[360995] = {
+	other = true,
+	name = "Verdant Embrace",
+	buff = 360995,
+	duration = { [1468] = 18, [default] = 24, },
+	class = "EVOKER",
+}
 
--- Evoker/Preservation/talents
--- Dream Projection
+LCT_SpellData[363534] = {
+	raidDefensive = true,
+	buff = 363534,
+	class = "EVOKER",
+	name = "Rewind",
+	charges = 1,
+	duration = 240,
+}
+
+LCT_SpellData[363916] = {
+	defensive = true,
+	buff = 363916,
+	class = "EVOKER",
+	name = "Obsidian Scales",
+	charges = 1,
+	duration = 90,
+}
+
+LCT_SpellData[365585] = {
+	dispel = true,
+	name = "Expunge",
+	buff = 365585,
+	duration = 8,
+	class = "EVOKER",
+}
+
+LCT_SpellData[367226] = {
+	offensive = true,
+	name = "Spiritbloom",
+	buff = 367226,
+	duration = 30,
+	class = "EVOKER",
+}
+
+LCT_SpellData[368412] = {
+	offensive = true,
+	name = "Time of Need",
+	buff = 368412,
+	duration = 60,
+	class = "EVOKER",
+}
+
+LCT_SpellData[368847] = {
+	offensive = true,
+	name = "Firestorm",
+	buff = 368847,
+	duration = 20,
+	class = "EVOKER",
+}
+
+LCT_SpellData[370388] = {
+	disarm = true,
+	name = "Swoop Up",
+	buff = 370388,
+	duration = 90,
+	class = "EVOKER",
+}
+
+LCT_SpellData[370452] = {
+	offensive = true,
+	name = "Shattering Star",
+	buff = 370452,
+	duration = 20,
+	class = "EVOKER",
+}
+
+LCT_SpellData[370537] = {
+	offensive = true,
+	name = "Stasis",
+	buff = 370537,
+	duration = 90,
+	class = "EVOKER",
+}
+
+LCT_SpellData[370553] = {
+	offensive = true,
+	name = "Tip the Scales",
+	buff = 370553,
+	duration = 120,
+	class = "EVOKER",
+}
+
+LCT_SpellData[370665] = {
+	other = true,
+	name = "Rescue",
+	buff = 370665,
+	duration = 60,
+	class = "EVOKER",
+}
+
+LCT_SpellData[370960] = {
+	defensive = true,
+	name = "Emerald Communion",
+	buff = 370960,
+	duration = 180,
+	class = "EVOKER",
+}
+
+LCT_SpellData[372048] = {
+	cc = true,
+	name = "Oppressing Roar",
+	buff = 372048,
+	duration = 120,
+	class = "EVOKER",
+}
+
+LCT_SpellData[374227] = {
+	raidDefensive = true,
+	name = "Zephyr",
+	buff = 374227,
+	duration = 120,
+	class = "EVOKER",
+}
+
+LCT_SpellData[374251] = {
+	dispel = true,
+	name = "Cauterizing Flame",
+	buff = 374251,
+	duration = 60,
+	class = "EVOKER",
+}
+
+LCT_SpellData[374348] = {
+	defensive = true,
+	name = "Renewing Blaze",
+	buff = 374348,
+	duration = 90,
+	class = "EVOKER",
+}
+
+LCT_SpellData[374968] = {
+	other = true,
+	name = "Time Spiral",
+	buff = 375234,
+	duration = 120,
+	class = "EVOKER",
+}
+
+LCT_SpellData[375087] = {
+	offensive = true,
+	name = "Dragonrage",
+	buff = 375087,
+	duration = 120,
+	class = "EVOKER",
+}
+
 LCT_SpellData[377509] = {
+	offensive = true,
+	name = "Dream Projection",
+	buff = 377509,
+	duration = 60,
 	class = "EVOKER",
-	specID = { SPEC_EVOKER_PRESERVATION },
+}
+
+LCT_SpellData[378441] = {
+	immunity = true,
+	name = "Time Stop",
+	buff = 378441,
+	duration = 45,
+	class = "EVOKER",
+}
+
+LCT_SpellData[378464] = {
+	counterCC = true,
+	name = "Nullifying Shroud",
+	buff = 378464,
+	duration = 90,
+	class = "EVOKER",
+}
+
+LCT_SpellData[382266] = {
+	offensive = true,
+	name = "Fire Breath",
+	buff = 382266,
+	duration = 30,
+	class = "EVOKER",
+}
+
+LCT_SpellData[382614] = {
+	specID = { 355936 }
+	offensive = true,
+	name = "Dream Breath",
+	buff = 382614,
+	duration = 30,
+	class = "EVOKER",
+}
+
+LCT_SpellData[383005] = {
+	disarm = true,
+	name = "Chrono Loop",
+	buff = 383005,
+	duration = 45,
+	class = "EVOKER",
+}
+
+LCT_SpellData[390386] = {
+	pve = true,
+	offensive = true,
+	name = "Fury of the Aspects",
+	buff = 390386,
+	duration = 300,
+	class = "EVOKER",
+}
+
+LCT_SpellData[395152] = {
+	offensive = true,
+	name = "Ebon Might",
+	buff = 395152,
+	duration = 30,
+	class = "EVOKER",
+}
+
+LCT_SpellData[396286] = {
+	disarm = true,
+	name = "Upheaval",
+	buff = 396286,
+	duration = 40,
+	class = "EVOKER",
+}
+
+LCT_SpellData[403631] = {
+	offensive = true,
+	name = "Breath of Eons",
+	buff = 403631,
+	duration = 120,
+	class = "EVOKER",
+}
+
+LCT_SpellData[404381] = {
+	specID = { 404195 }
+	defensive = true,
+	name = "Defy Fate",
+	buff = 404381,
+	duration = 360,
+	class = "EVOKER",
+}
+
+LCT_SpellData[404977] = {
+	other = true,
+	buff = 404977,
+	class = "EVOKER",
+	name = "Time Skip",
 	talent = true,
-	cooldown = 150
+	duration = 180,
+}
+
+LCT_SpellData[406732] = {
+	other = true,
+	name = "Spatial Paradox",
+	buff = 406732,
+	duration = 120,
+	class = "EVOKER",
 }

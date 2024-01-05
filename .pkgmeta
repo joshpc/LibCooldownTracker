@@ -1,4 +1,4 @@
-package-as: LibCooldownTracker-1.0
+package-as: LibCooldownTracker-2.0
 enable-nolib-creation: no
 
 externals:

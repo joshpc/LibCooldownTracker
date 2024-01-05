@@ -38,3 +38,11 @@ LCT_SpellData[6262] = {
 	cooldown = 60
 }
 LCT_SpellData[5512] = 6262
+
+LCT_SpellData[345231] = {
+	item = true,
+	trinket = true,
+	name = "Gladiator's Emblem",
+	buff = 345231,
+	duration = 120
+}

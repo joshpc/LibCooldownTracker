@@ -4,433 +4,426 @@ local SPEC_MAGE_ARCANE = 62
 local SPEC_MAGE_FIRE = 63
 local SPEC_MAGE_FROST = 64
 
-local DRAGON_BREATH = 31661
-local COMBUSTION = 190319
-local db_reduce = {
-	spellid = DRAGON_BREATH,
-	duration = 2
-}
--- Fingers of Frost
-LCT_SpellData[112965] = {
-	class = "MAGE",
-	reduce = db_reduce,
-	hidden = true,
-	cooldown_starts_on_aura_fade = true,
-}
--- Clearcasting
-LCT_SpellData[263725] = {
-	class = "MAGE",
-	reduce = db_reduce,
-	hidden = true,
-	cooldown_starts_on_aura_fade = true,
-}
-
-
-local combust_reduce = {
-	spellid = COMBUSTION,
-	buff = COMBUSTION,
-	duration = 1,
-}
--- Pyroblast
-LCT_SpellData[11366] = {
-	class = "MAGE",
-	reduce = combust_reduce,
-	hidden = true,
-	cooldown_starts_on_aura_fade = true,
-}
--- Scorch
-LCT_SpellData[2948] = {
-	class = "MAGE",
-	reduce = combust_reduce,
-	hidden = true,
-	cooldown_starts_on_aura_fade = true,
-}
--- Fireball
-LCT_SpellData[133] = {
-	class = "MAGE",
-	reduce = combust_reduce,
-	hidden = true,
-	cooldown_starts_on_aura_fade = true,
-}
-
-
--- Mage/baseline
--- Blink
-LCT_SpellData[1953] = {
-	class = "MAGE",
-	defensive = true,
-	cooldown = 15
-}
--- Shimmer
-LCT_SpellData[212653] = {
-	class = "MAGE",
-	defensive = true,
-	talent = true,
-	charges = 2,
-	cooldown = 20,
-	replaces = 1953
-}
--- Counterspell
-LCT_SpellData[2139] = {
-	class = "MAGE",
-	interrupt = true,
-	cooldown = 24,
-}
--- Frost Nova
-LCT_SpellData[122] = {
-	class = "MAGE",
-	cc = true,
-	cooldown = 30,
-	opt_charges = 2,
-}
--- Ice Block
-LCT_SpellData[45438] = {
-	class = "MAGE",
-	defensive = true,
-	immune = true,
-	duration = 10,
-	cooldown = 240
-}
--- Ice Cold
-LCT_SpellData[414659] = {
-	class = "MAGE",
-  talent = true,
-	defensive = true,
-	duration = 6,
-	cooldown = 240,
-	replaces = 45438
-}
--- Mirror Image
-LCT_SpellData[55342] = {
-	class = "MAGE",
-	offensive = true,
-	cooldown = 120
-}
--- Time Warp
-LCT_SpellData[80353] = {
-	class = "MAGE",
-	offensive = true,
-	duration = 40,
-	cooldown = 300
-}
-
--- Mage/mixed
--- Alter Time
-LCT_SpellData[342245] = {
-	class = "MAGE",
-	defensive = true,
-	duration = 10,
-	cooldown = 60,
-	opt_lower_cooldown = 50, -- with 342249 Master of Time
-}
-
--- Mage/talents
--- Temporal Shield
-LCT_SpellData[198111] = {
-	class = "MAGE",
-	defensive = true,
-	talent = true,
-	duration = 4,
-	cooldown = 45
-}
--- Kleptomania
-LCT_SpellData[198100] = {
-	class = "MAGE",
-	defensive = true,
-	talent = true,
-	cooldown = 20
-}
--- Ring of Frost
-LCT_SpellData[113724] = {
-	class = "MAGE",
-	talent = true,
-	cc = true,
-	duration = 10,
-	cooldown = 45
-}
--- Rune of Power
-LCT_SpellData[116011] = {
-	class = "MAGE",
-	talent = true,
-	cooldown = 45,
-	opt_charges = 2,
-}
--- Invisibility
 LCT_SpellData[66] = {
-	class = "MAGE",
 	defensive = true,
-	duration = 20,
-	cooldown = 300
-}
--- Mass Invisibility
-LCT_SpellData[414664] = {
+	name = "Invisibility",
+	buff = 66,
+	duration = 300,
 	class = "MAGE",
-	talent = true,
-	duration = 12,
-	cooldown = 300
 }
 
--- Mage/Arcane
--- Greater Invisibility (arcane)
-LCT_SpellData[110959] = {
+LCT_SpellData[122] = {
+	disarm = true,
+	name = "Frost Nova",
+	buff = 122,
+	duration = 30,
 	class = "MAGE",
-	talent = true,
-	defensive = true,
-	duration = 20,
-	cooldown = 120
-}
--- Evocation
-LCT_SpellData[12051] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_ARCANE },
-	defensive = true,
-	duration = 6,
-	cooldown = 90
-}
--- Presence of Mind
-LCT_SpellData[205025] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_ARCANE },
-	offensive = true,
-	cooldown = 45
-}
--- Prismatic Barrier
-LCT_SpellData[235450] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_ARCANE },
-	defensive = true,
-	cooldown = 25
-}
--- Displacement when Blink (Arcane)
-LCT_SpellData[195676] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_ARCANE },
-	defensive = true,
-	cooldown = 30,
-	resets = { 1953 }
-}
--- Mage/Arcane/talents
--- Arcane Orb
-LCT_SpellData[153626] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_ARCANE },
-	talent = true,
-	cooldown = 20
-}
--- Supernova
-LCT_SpellData[157980] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_ARCANE },
-	talent = true,
-	cooldown = 25
-}
--- Arcanosphere
-LCT_SpellData[353128] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_ARCANE },
-	talent = true,
-	cooldown = 45
 }
 
--- Mage/Fire
--- Combustion
-LCT_SpellData[COMBUSTION] = {
+LCT_SpellData[475] = {
+	dispel = true,
+	name = "Remove Curse",
+	buff = 475,
+	duration = 8,
 	class = "MAGE",
-	specID = { SPEC_MAGE_FIRE },
-	offensive = true,
-	duration = 10,
-	cooldown = 120
-}
--- Dragon's Breath
-LCT_SpellData[DRAGON_BREATH] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FIRE },
-	cc = true,
-	cooldown = 45
-}
--- Blazing Barrier
-LCT_SpellData[235313] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FIRE },
-	offensive = true,
-	cooldown = 25
-}
--- Fire Blast
-LCT_SpellData[108853] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FIRE },
-	offensive = true,
-	cooldown = 12,
-	reduces = {
-		combust_reduce,
-		{ -- like db_reduce, but only for fire
-			spellid = DRAGON_BREATH,
-			specId = SPEC_MAGE_FIRE,
-			duration = 2
-		}
-	}
-}
--- Cauterize
-LCT_SpellData[86949] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FIRE },
-	defensive = true,
-	duration = 6,
-	cooldown = 300
-}
--- Mage/Fire/talents
--- Blast Wave
-LCT_SpellData[157981] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FIRE },
-	talent = true,
-	offensive = true,
-	cooldown = 30
-}
--- Living Bomb
-LCT_SpellData[44457] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FIRE },
-	talent = true,
-	cooldown = 30
-}
--- Meteor
-LCT_SpellData[153561] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FIRE },
-	talent = true,
-	cooldown = 45
-}
--- Phoenix Flames
-LCT_SpellData[257541] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FIRE },
-	talent = true,
-	cooldown = 25,
-	charges = 3,
-	reduce = combust_reduce
-}
--- Ring of Fire
-LCT_SpellData[353082] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FIRE },
-	talent = true,
-	cooldown = 30,
 }
 
--- Mage/Frost
--- Ice Barrier
+LCT_SpellData[1953] = {
+	talent = true,
+	other = true,
+	name = "Blink",
+	buff = 1953,
+	duration = 15,
+	class = "MAGE",
+}
+
+LCT_SpellData[2139] = {
+	interrupt = true,
+	name = "Counterspell",
+	buff = 2139,
+	duration = 24,
+	class = "MAGE",
+}
+
 LCT_SpellData[11426] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FROST },
 	defensive = true,
-	cooldown = 25
-}
--- Frozen Orb
-LCT_SpellData[84714] = {
+	name = "Ice Barrier",
+	buff = 11426,
+	duration = 25,
 	class = "MAGE",
-	specID = { SPEC_MAGE_FROST },
-	offensive = true,
-	duration = 10,
-	cooldown = 60
-}
--- Icy Veins
-LCT_SpellData[12472] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FROST },
-	offensive = true,
-	duration = 20,
-	cooldown = 120,
-}
--- Cold Snap
-LCT_SpellData[235219] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FROST },
-	resets = { 11426, 45438, 122, 120, 414659 }, -- ice barrier, ice block, frost nova, cone of cold, ice cold
-	cooldown = 300,
-}
--- Cone of Cold
-LCT_SpellData[120] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FROST },
-	offensive = true,
-	cooldown = 12,
-}
--- Summon Water Elemental
-LCT_SpellData[31687] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FROST },
-	cooldown = 30
-}
--- Mage/Frost/talents
--- Comet Storm
-LCT_SpellData[153595] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FROST },
-	talent = true,
-	cooldown = 30
-}
--- Ice Form
-LCT_SpellData[198144] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FROST },
-	talent = true,
-	duration = 12,
-	cooldown = 60,
-	replaces = 12472 -- Icy Veins
-}
--- Ice Nova
-LCT_SpellData[157997] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FROST },
-	talent = true,
-	cooldown = 25
-}
--- Ray of Frost
-LCT_SpellData[205021] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FROST },
-	talent = true,
-	offensive = true,
-	cooldown = 60,
-}
--- Ice Floes
-LCT_SpellData[108839] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FROST },
-	talent = true,
-	cooldown = 20,
-	charges = 3
-}
--- Ebonbolt
-LCT_SpellData[257537] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FROST },
-	talent = true,
-	offensive = true,
-	cooldown = 30,
-}
--- Ice Wall
-LCT_SpellData[352278] = {
-	class = "MAGE",
-	specID = { SPEC_MAGE_FROST },
-	talent = true,
-	cooldown = 90,
 }
 
--- Mage/Pet
--- Freeze
-LCT_SpellData[33395] = {
+LCT_SpellData[12051] = {
+	other = true,
+	buff = 12051,
 	class = "MAGE",
-	specID = { SPEC_MAGE_FROST },
-	pet = true,
-	cooldown = 25
+	name = "Evocation",
+	charges = 1,
+	duration = 90,
 }
--- Shifting Power
-LCT_SpellData[382440] = {
-	class = "MAGE",
+
+LCT_SpellData[12472] = {
 	offensive = true,
-	duration = 4,
-	cooldown = 60,
-	reduce = { all = true, duration = 10 }
+	buff = 12472,
+	class = "MAGE",
+	name = "Icy Veins",
+	talent = true,
+	duration = 120,
+}
+
+LCT_SpellData[31661] = {
+	cc = true,
+	name = "Dragon's Breath",
+	buff = 31661,
+	duration = 45,
+	class = "MAGE",
+}
+
+LCT_SpellData[31687] = {
+	other = true,
+	name = "Summon Water Elemental",
+	buff = 31687,
+	duration = 30,
+	class = "MAGE",
+}
+
+LCT_SpellData[44614] = {
+	offensive = true,
+	buff = 44614,
+	class = "MAGE",
+	name = "Flurry",
+	charges = 1,
+	duration = 30,
+}
+
+LCT_SpellData[45438] = {
+	immunity = true,
+	buff = 45438,
+	class = "MAGE",
+	name = "Ice Block",
+	talent = true,
+	duration = 240,
+}
+
+LCT_SpellData[55342] = {
+	defensive = true,
+	name = "Mirror Image",
+	buff = 55342,
+	duration = 120,
+	class = "MAGE",
+}
+
+LCT_SpellData[80353] = {
+	pve = true,
+	offensive = true,
+	name = "Time Warp",
+	buff = 80353,
+	duration = 300,
+	class = "MAGE",
+}
+
+LCT_SpellData[84714] = {
+	offensive = true,
+	name = "Frozen Orb",
+	buff = 84714,
+	duration = 60,
+	class = "MAGE",
+}
+
+LCT_SpellData[86949] = {
+	specID = { SPEC_MAGE_FIRE }
+	defensive = true,
+	name = "Cauterize",
+	buff = 86949,
+	duration = 300,
+	class = "MAGE",
+}
+
+LCT_SpellData[108839] = {
+	other = true,
+	buff = 108839,
+	class = "MAGE",
+	name = "Ice Floes",
+	charges = 3,
+	duration = 20,
+}
+
+LCT_SpellData[110959] = {
+	defensive = true,
+	name = "Greater Invisibility",
+	buff = 110959,
+	duration = 120,
+	class = "MAGE",
+}
+
+LCT_SpellData[113724] = {
+	cc = true,
+	name = "Ring of Frost",
+	buff = 113724,
+	duration = 45,
+	class = "MAGE",
+}
+
+LCT_SpellData[116011] = {
+	offensive = true,
+	buff = 116011,
+	class = "MAGE",
+	name = "Rune of Power",
+	charges = 1,
+	duration = 45,
+}
+
+LCT_SpellData[153561] = {
+	offensive = true,
+	name = "Meteor",
+	buff = 153561,
+	duration = 45,
+	class = "MAGE",
+}
+
+LCT_SpellData[153595] = {
+	offensive = true,
+	name = "Comet Storm",
+	buff = 153595,
+	duration = 30,
+	class = "MAGE",
+}
+
+LCT_SpellData[153626] = {
+	offensive = true,
+	buff = 153626,
+	class = "MAGE",
+	name = "Arcane Orb",
+	charges = 1,
+	duration = 20,
+}
+
+LCT_SpellData[157980] = {
+	disarm = true,
+	name = "Supernova",
+	buff = 157980,
+	duration = 25,
+	class = "MAGE",
+}
+
+LCT_SpellData[157981] = {
+	disarm = true,
+	name = "Blast Wave",
+	buff = 157981,
+	duration = 30,
+	class = "MAGE",
+}
+
+LCT_SpellData[157997] = {
+	disarm = true,
+	name = "Ice Nova",
+	buff = 157997,
+	duration = 25,
+	class = "MAGE",
+}
+
+LCT_SpellData[190319] = {
+	offensive = true,
+	name = "Combustion",
+	buff = 190319,
+	duration = 120,
+	class = "MAGE",
+}
+
+LCT_SpellData[198100] = {
+	dispel = true,
+	name = "Kleptomania",
+	buff = 198100,
+	duration = 30,
+	class = "MAGE",
+}
+
+LCT_SpellData[198111] = {
+	defensive = true,
+	name = "Temporal Shield",
+	buff = 198111,
+	duration = 45,
+	class = "MAGE",
+}
+
+LCT_SpellData[198144] = {
+	offensive = true,
+	name = "Ice Form",
+	buff = 198144,
+	duration = 60,
+	class = "MAGE",
+}
+
+LCT_SpellData[205021] = {
+	offensive = true,
+	name = "Ray of Frost",
+	buff = 205021,
+	duration = 60,
+	class = "MAGE",
+}
+
+LCT_SpellData[205025] = {
+	offensive = true,
+	name = "Presence of Mind",
+	buff = 205025,
+	duration = 45,
+	class = "MAGE",
+}
+
+LCT_SpellData[212653] = {
+	other = true,
+	buff = 212653,
+	class = "MAGE",
+	name = "Shimmer",
+	charges = 2,
+	duration = 25,
+}
+
+LCT_SpellData[235219] = {
+	specID = { SPEC_MAGE_FROST }
+	defensive = true,
+	name = "Cold Snap",
+	buff = 235219,
+	duration = 300,
+	class = "MAGE",
+}
+
+LCT_SpellData[235313] = {
+	defensive = true,
+	name = "Blazing Barrier",
+	buff = 235313,
+	duration = 25,
+	class = "MAGE",
+}
+
+LCT_SpellData[235450] = {
+	defensive = true,
+	name = "Prismatic Barrier",
+	buff = 235450,
+	duration = 25,
+	class = "MAGE",
+}
+
+LCT_SpellData[257541] = {
+	offensive = true,
+	buff = 257541,
+	class = "MAGE",
+	name = "Phoenix Flames",
+	charges = 2,
+	duration = 25,
+}
+
+LCT_SpellData[321507] = {
+	offensive = true,
+	name = "Touch of the Magi",
+	buff = 321507,
+	duration = 45,
+	class = "MAGE",
+}
+
+LCT_SpellData[342245] = {
+	defensive = true,
+	name = "Alter Time",
+	buff = 342246,
+	duration = 60,
+	class = "MAGE",
+}
+
+LCT_SpellData[352278] = {
+	disarm = true,
+	name = "Ice Wall",
+	buff = 352278,
+	duration = 90,
+	class = "MAGE",
+}
+
+LCT_SpellData[353082] = {
+	offensive = true,
+	name = "Ring of Fire",
+	buff = 353082,
+	duration = 30,
+	class = "MAGE",
+}
+
+LCT_SpellData[353128] = {
+	offensive = true,
+	name = "Arcanosphere",
+	buff = 353128,
+	duration = 45,
+	class = "MAGE",
+}
+
+LCT_SpellData[365350] = {
+	offensive = true,
+	name = "Arcane Surge",
+	buff = 365362,
+	duration = 90,
+	class = "MAGE",
+}
+
+LCT_SpellData[376103] = {
+	specID = { 376103, 321076 }
+	offensive = true,
+	name = "Radiant Spark",
+	buff = 376103,
+	duration = 30,
+	class = "MAGE",
+}
+
+LCT_SpellData[382440] = {
+	specID = { 382440, 321077 }
+	offensive = true,
+	name = "Shifting Power",
+	buff = 382440,
+	duration = 60,
+	class = "MAGE",
+}
+
+LCT_SpellData[383121] = {
+	cc = true,
+	name = "Mass Polymorph",
+	buff = 383121,
+	duration = 60,
+	class = "MAGE",
+}
+
+LCT_SpellData[389713] = {
+	other = true,
+	name = "Displacement",
+	buff = 389713,
+	duration = 45,
+	class = "MAGE",
+}
+
+LCT_SpellData[389794] = {
+	cc = true,
+	name = "Snowdrift",
+	buff = 389794,
+	duration = 45,
+	class = "MAGE",
+}
+
+LCT_SpellData[414658] = {
+	specID = { 414659 }
+	defensive = true,
+	name = "Ice Cold",
+	buff = 414658,
+	duration = 240,
+	class = "MAGE",
+}
+
+LCT_SpellData[414660] = {
+	defensive = true,
+	name = "Mass Barrier",
+	buff = 414660,
+	duration = 120,
+	class = "MAGE",
+}
+
+LCT_SpellData[414664] = {
+	defensive = true,
+	name = "Mass Invisibility",
+	buff = 414664,
+	duration = 300,
+	class = "MAGE",
 }

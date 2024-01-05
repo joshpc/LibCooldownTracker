@@ -1,4 +1,4 @@
-local lib, version = LibStub("LibCooldownTracker-1.0")
+local lib, version = LibStub("LibCooldownTracker-2.0")
 
 function lib:GetSpecializationInfoByID(specID)
 	local specs = {
@@ -119,6 +119,19 @@ function lib:GetSpecializationInfoByID(specID)
 			name = "Restoration",
 			icon = 136052,
 		},
+		-- monk
+		[268] = {
+			name = "Brewmaster",
+			icon = 608951,
+		},
+		[269] = {
+			name = "Windwalker",
+			icon = 608953,
+		},
+		[270] = {
+			name = "Mistweaver",
+			icon = 608952,
+		},
 		-- evoker
 		[1467] = {
 			name = "Devastation",
@@ -127,6 +140,10 @@ function lib:GetSpecializationInfoByID(specID)
 		[1468] = {
 			name = "Preservation",
 			icon = 4511812
+		},
+		[1473] = {
+			name = "Augmentation",
+			icon = 5198700
 		}
 	}
 	return specs[specID].name, specs[specID].icon
