@@ -127,6 +127,10 @@ function lib:GetSpecializationInfoByID(specID)
 		[1468] = {
 			name = "Preservation",
 			icon = 4511812
+		},
+		[1473] = {
+			name = "Augmentation",
+			icon = 5198700
 		}
 	}
 	return specs[specID].name, specs[specID].icon
