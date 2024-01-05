@@ -233,15 +233,7 @@ local function check_reduce(reduce, unit, spellid)
 		end
 	end
 
-	local specIDs = reduce.specIDs or reduce.specID and { reduce.specID }
-	local unitSpec = GladiusEx and GladiusEx.buttons[unit] and GladiusEx.buttons[unit].specID
-	if specIDs and unitSpec then
-		local hasSpec = any(specIDs, function (spec) return spec == unitSpec end) 
-		if not hasSpec then
-			-- we're not one of the required specs
-			return false
-		end
-	end
+	-- TODO: Re-add specialization check
 
 	return true
 end
