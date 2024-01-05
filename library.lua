@@ -181,19 +181,6 @@ local function GetCooldownTime(spellid, unit)
 	local spelldata = SpellData[spellid]
 	local time = spelldata.cooldown
 
-	-- V: note - this thing ties it to GladiusEx, but no choice :(
-	if GladiusEx and GladiusEx.buttons[unit] and spelldata.cooldown_overload then
-		local button = GladiusEx.buttons[unit]
-		local overloads = spelldata.cooldown_overload
-		if button.specID and overloads[button.specID] then
-			return overloads[button.specID]
-		end
-		local class = GladiusEx.buttons[unit].class or select(2, UnitClass(unit))
-		if class and overloads[class] then
-			return overloads[class]
-		end
-	end
-
 	local tps = lib.tracked_players[unit][spellid]
 	if tps and tps.cooldown then
 		time = tps.cooldown
@@ -205,10 +192,10 @@ end
 local function AuraByIdPredicate(auraNameToFind, _, _, ...)
 	return auraNameToFind == select(10, ...)
 end
+
 local function FindAuraById(auraId, unit, filter)
 	return AuraUtil.FindAura(AuraByIdPredicate, unit, filter, auraId)
 end 
-
 
 local function AddCharge(unit, spellid)
 	local tps = lib.tracked_players[unit][spellid]
