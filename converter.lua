@@ -17,7 +17,7 @@ E = {}
 E.spell_db = {}
 
 function tableToStringKey(key)
-	if type(key) == "number"
+	if type(key) == "number" then
 		return "[" .. key .. "]"
 	else
 		return key
