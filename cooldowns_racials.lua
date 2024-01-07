@@ -3,7 +3,7 @@
 LCT_SpellData[59544] = {
 	race = "Draenei",
 	heal = true,
-	duration = 5,
+	cooldown = 5,
 	cooldown = 180,
 }
 
@@ -55,7 +55,7 @@ LCT_SpellData[69179] = 28730
 LCT_SpellData[20572] = {
 	race = "Orc",
 	offensive = true,
-	duration = 15,
+	cooldown = 15,
 	cooldown = 120,
 }
 LCT_SpellData[33697] = 20572
@@ -64,13 +64,13 @@ LCT_SpellData[33702] = 20572
 LCT_SpellData[20577] = {
 	race = "Scourge",
 	heal = true,
-	duration = 10,
+	cooldown = 10,
 	cooldown = 120,
 }
 -- Darkflight (Worgen)
 LCT_SpellData[68992] = {
 	race = "Worgen",
-	duration = 10,
+	cooldown = 10,
 	cooldown = 120,
 }
 -- Escape Artist (Gnome)
@@ -108,28 +108,28 @@ LCT_SpellData[58984] = {
 LCT_SpellData[20594] = {
 	race = "Dwarf",
 	defensive = true,
-	duration = 8,
+	cooldown = 8,
 	cooldown = 120,
 }
 -- War Stomp (Tauren)
 LCT_SpellData[20549] = {
 	race = "Tauren",
 	stun = true,
-	duration = 2,
+	cooldown = 2,
 	cooldown = 120,
 }
 -- Berserking (Troll)
 LCT_SpellData[26297] = {
 	race = "Troll",
 	offensive = true,
-	duration = 10,
+	cooldown = 10,
 	cooldown = 180
 }
 -- Arcane Pulse (Nightborne)
 LCT_SpellData[260364] = {
 	race = "Nightborne",
 	offensive = true,
-	duration = 12,
+	cooldown = 12,
 	cooldown = 180
 }
 -- Bull Rush (HighmountainTauren)
@@ -142,7 +142,7 @@ LCT_SpellData[255654] = {
 LCT_SpellData[255647] = {
 	race = "LightforgedDraenei",
 	offensive = true,
-	duration = 3,
+	cooldown = 3,
 	cooldown = 150, -- 2.5min
 }
 -- Spatial Rift (VoidElf)

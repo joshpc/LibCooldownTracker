@@ -72,6 +72,11 @@ for className, spells in pairs(E.spell_db) do
 		for key, value in pairs(spell) do
 			uniqueKeys[key] = true
 
+			-- Map to something more logical
+			if key == "duration" then
+				key = "cooldown"
+			end
+
 			if ignoredKeys[key] then
 				-- Do nothing
 			elseif key == "talent" then
