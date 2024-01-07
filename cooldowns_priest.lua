@@ -29,7 +29,7 @@ LCT_SpellData[8092] = {
 	offensive = true,
 	name = "Mind Blast",
 	buff = 8092,
-	cooldown = { [256] = 24, [258] = 9, },
+	cooldown = 24,
 	class = "PRIEST",
 }
 

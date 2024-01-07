@@ -44,7 +44,7 @@ local ignoredKeys = {
 }
 local uniqueKeys = {}
 
-function getSortedKeys(t)
+local function getSortedKeys(t)
 	keyMap = {}
 	spellIDs = {}
 	for k, v in pairs(t) do
@@ -60,6 +60,12 @@ function getSortedKeys(t)
 		table.insert(sortedKeys, keyMap[spellID])
 	end
 	return sortedKeys
+end
+
+local function getFirstValue(t)
+	for _, v in pairs(t) do
+		return v
+	end
 end
 
 for className, spells in pairs(E.spell_db) do
@@ -94,7 +100,12 @@ for className, spells in pairs(E.spell_db) do
 			elseif type(value) == "boolean" then
 				print("\t" .. key .. " = " .. tostring(value) .. ",")
 			elseif type(value) == "table" then
-				print("\t" .. key .. " = " .. tableToString(value, '') .. ",")
+				if key == "cooldown" then
+					--TODO: This currently flattens the cooldown value. This isn't great because we ignore things where certain specs have lower CDs.
+					print("\t" .. key .. " = " .. (value["default"] or getFirstValue(value) or 0) .. ",")
+				else
+					print("\t" .. key .. " = " .. tableToString(value, '') .. ",")
+				end
 			elseif type(value) == "string" then
 				print("\t" .. key .. " = \"" .. value .. "\",")
 			else

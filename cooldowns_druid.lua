@@ -84,7 +84,7 @@ LCT_SpellData[22812] = {
 	defensive = true,
 	name = "Barkskin",
 	buff = 22812,
-	cooldown = { [104] = 45, default = 60, },
+	cooldown = 60,
 	class = "DRUID",
 }
 
@@ -487,7 +487,7 @@ LCT_SpellData[391888] = {
 	specID = { 391888, 321078 },
 	offensive = true,
 	name = "Adaptive Swarm",
-	uff = 391888,
+	buff = 391888,
 	cooldown = 25,
 	class = "DRUID",
 }

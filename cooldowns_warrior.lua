@@ -122,7 +122,7 @@ LCT_SpellData[23920] = {
 	class = "WARRIOR",
 	name = "Spell Reflection",
 	charges = 1,
-	cooldown = { [73] = 20, default = 25, },
+	cooldown = 25,
 }
 
 LCT_SpellData[46968] = {

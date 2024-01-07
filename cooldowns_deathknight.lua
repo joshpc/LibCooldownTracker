@@ -125,7 +125,7 @@ LCT_SpellData[49576] = {
 	disarm = true,
 	name = "Death Grip",
 	buff = 49576,
-	cooldown = { [250] = 15, default = 25, },
+	cooldown = 25,
 	class = "DEATHKNIGHT",
 }
 

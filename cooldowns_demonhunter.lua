@@ -253,7 +253,7 @@ LCT_SpellData[258920] = {
 	offensive = true,
 	name = "Immolation Aura",
 	buff = 258920,
-	cooldown = { [581] = 15, default = 30, },
+	cooldown = 30,
 	class = "DEMONHUNTER",
 }
 
